@@ -404,6 +404,98 @@ img {
     background-color: #471754;
 }
 
+#logo {
+    width: 20%;
+    height: 20%;
+}
+
+.contenedor-login {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenedor-formulario {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+#logo img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.titulo-login {
+    font-size: 24px;
+    font-weight: 600;
+    color: #471754;
+    margin-bottom: 20px;
+}
+
+label {
+    width: 100%;
+    font-weight: 500;
+    color: #333333;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #471754;
+    box-shadow: 0 0 5px rgba(71, 23, 84, 0.3);
+}
+
+button#iniciar_sesion {
+    width: 100%;
+    padding: 10px;
+    background-color: #991D5D;
+    color: #FFFFFF;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button#iniciar_sesion:hover {
+    background-color: #471754;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.formulario a {
+    color: #991D5D;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.formulario a:hover {
+    color: #471754;
+}
+
 /*Pie de Pagina*/
 
 .footer {
