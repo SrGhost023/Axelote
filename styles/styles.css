@@ -57,6 +57,8 @@ ul {
     color: #DEC87A;
 }
 
+/* Menús Navbar */
+
 .menu-inicial,
 .menu-items {
     list-style: none;
@@ -169,6 +171,7 @@ ul {
 }
 
 /*--------------Buscador----------------*/
+
 .buscador {
     flex: 1;
     display: flex;
@@ -259,7 +262,9 @@ img {
 #carrito_li {
     margin-left: 20px;
 }
+
 /*-----------------------Menu Hamburguesa-------------------------*/
+
 #menu_hamburguesa {
     display: none;
     background-color: #471754;
@@ -325,7 +330,7 @@ img {
     transition: transform 0.3s ease-in-out;
 }
 
-/*Carrusel*/
+/* Carrusel */
 
 .carrusel-container {
     position: relative;
@@ -336,7 +341,7 @@ img {
     border: 2px solid #DEC87A;
     border-radius: 10px;
     background-color: #f07951;
-    padding-bottom: 40px; /* Espacio para los indicadores */
+    padding-bottom: 40px;
 }
 
 .carrusel {
@@ -363,8 +368,8 @@ img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 80px; /* Ajusta el tamaño de la imagen de la flecha */
-    height: 120px; /* Ajusta el tamaño de la imagen de la flecha */
+    width: 80px;
+    height: 120px;
     cursor: pointer;
     opacity: 0.7;
     transition: opacity 0.3s;
@@ -375,11 +380,11 @@ img {
 }
 
 .anterior {
-    left: 10px; /* Ajusta la posición de la imagen de la flecha izquierda */
+    left: 10px;
 }
 
 .siguiente {
-    right: 10px; /* Ajusta la posición de la imagen de la flecha derecha */
+    right: 10px;
 }
 
 .carrusel-indicadores {
@@ -403,6 +408,8 @@ img {
 .indicador.activo {
     background-color: #471754;
 }
+
+/* Iniciar Sesión */
 
 #logo {
     width: 20%;
@@ -496,7 +503,9 @@ button#iniciar_sesion:hover {
     color: #471754;
 }
 
-/*Pie de Pagina*/
+/* Registrarse */
+
+/* Pie de Página */
 
 .footer {
     background-color: #471754;
