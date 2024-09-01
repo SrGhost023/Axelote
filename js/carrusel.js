@@ -25,7 +25,7 @@ function actualizarIndicadores() {
 }
 
 function iniciarAutoSlide() {
-    return establecerIntervalo(() => {
+    return setInterval(() => {
         mostrarProducto(currentIndex + 1);
     }, 5000); // Cambia de producto cada 5 segundos
 }
@@ -34,12 +34,12 @@ let autoSlideInterval = iniciarAutoSlide();
 
 siguiente.addEventListener('click', () => {
     mostrarProducto(currentIndex + 1);
-    resetAutoSlide();
+    resetearAutoSlide();
 });
 
 anterior.addEventListener('click', () => {
     mostrarProducto(currentIndex - 1);
-    resetAutoSlide();
+    resetearAutoSlide();
 });
 
 indicadores.forEach((indicador, index) => {
