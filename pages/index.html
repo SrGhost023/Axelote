@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Axel Ferreira, Enzo Martinez" />
-    <meta name="keywords" content="Electrónica, Market, Ajolote, Tienda en Línea" />
+    <meta name="keywords" content="Electrónica, Market, Ajolote, Axelote Market, Tienda en Línea, E-Commerce" />
     <meta name="description" content="Axelote Market es una tienda en línea especializada en productos de electrónica." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Axelote Market - Electrónica</title>
@@ -20,11 +20,19 @@
                 <span class="nombre">Axelote</span>
             </a>
             <ul class="menu-inicial">
-                <li class="li"><a href="buscador.html">Categorías</a></li>
+                <li class="li menu-desplegable" id="menu_desplegable"><button>Categorías</button></li>
+                <ul class="submenu">
+                    <li><a href="catalogo.html">PCs</a></li>
+                    <li><a href="catalogo.html">Celulares</a></li>
+                    <li><a href="catalogo.html">Tablets</a></li>
+                    <li><a href="catalogo.html">Notebooks</a></li>
+                </ul>
             </ul>
             <div class="buscador">
                 <button id="buscar">
-                    <img src="../images/icons/lupa.png" alt="Imagen de una Lupa." />
+                    <a href="catalogo.html">
+                        <img src="../images/icons/lupa.png" alt="Imagen de una Lupa." />
+                    </a>
                 </button>
                 <input type="text" placeholder="Buscar..." aria-label="Caja de búsqueda" />
             </div>
@@ -46,6 +54,11 @@
             </ul>
         </nav>
     </header>
+
+    <footer class="footer">
+        <p>&copy; 2024, Todos los Derechos Reservados a Enzo Martinez y Axel Ferreira.</p>
+        <a href="terminosDePrivacidad.html">Términos y Condiciones</a> | <a href="preguntasFrecuentes">Preguntas Frecuentes</a>
+    </footer>
     <script src="../js/script.js"></script>
 </body>
 
