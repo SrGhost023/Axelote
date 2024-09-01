@@ -1,59 +1,29 @@
-document.getElementById('toggleButton').addEventListener('click', function() {
-    const loginForm = document.getElementById('loginForm');
-    const formTitle = document.getElementById('formTitle');
-    const submitButton = document.getElementById('submitButton');
-    const toggleText = document.getElementById('toggleText');
-    const isRegistering = formTitle.textContent === 'Iniciar Sesión';
+document.addEventListener('DOMContentLoaded', function () {
+    const buscarButton = document.getElementById('buscar');
+    const buscador = document.querySelector('.buscador');
 
-    if (isRegistering) {
-        formTitle.textContent = 'Registrarse';
-        submitButton.textContent = 'Registrarse';
-        loginForm.innerHTML = `
-            <div class="form-group">
-                <label for="username">Nombre de usuario</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group" id="confirmPasswordContainer" style="display: none;">
-                <label for="confirmPassword">Confirmar contraseña</label>
-                <input type="password" id="confirmPassword" name="confirmPassword">
-            </div>
-            <div class="form-group">
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <button type="submit" id="submitButton">Registrarse</button>
-        `;
-        toggleText.textContent = '¿Ya tienes cuenta?';
-        document.getElementById('toggleButton').textContent = 'Iniciar Sesión';
+    // Manejar el evento de entrar al área del botón o del buscador
+    buscarButton.addEventListener('mouseenter', function () {
+        buscador.classList.add('active');
+        const input = buscador.querySelector('input');
+        input.focus();
+    });
 
-        document.getElementById('password').addEventListener('input', function() {
-            const confirmPasswordContainer = document.getElementById('confirmPasswordContainer');
-            if (this.value) {
-                confirmPasswordContainer.style.display = 'block';
-            } else {
-                confirmPasswordContainer.style.display = 'none';
-            }
-        });
+    // Manejar el evento de salir del área del botón o del buscador
+    buscador.addEventListener('mouseleave', function () {
+        buscador.classList.remove('active');
+    });
+});
 
+document.getElementById("boton_hamburguesa").addEventListener("click", function () {
+    var menu = document.getElementById("menu_hamburguesa");
+    var icono = document.querySelector("#boton_hamburguesa span");
+
+    menu.classList.toggle("mostrando");
+    icono.classList.toggle("rotar");
+    if (menu.style.display === "none") {
+        menu.style.display = "block";
     } else {
-        formTitle.textContent = 'Iniciar Sesión';
-        submitButton.textContent = 'Iniciar Sesión';
-        loginForm.innerHTML = `
-            <div class="form-group">
-                <label for="username">Nombre de usuario</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit" id="submitButton">Iniciar Sesión</button>
-        `;
-        toggleText.textContent = '¿No tienes cuenta?';
-        document.getElementById('toggleButton').textContent = 'Registrarse';
+        menu.style.display = "none";
     }
 });
