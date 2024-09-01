@@ -1,9 +1,9 @@
-const carousel = document.querySelector('.carousel');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
+const carousel = document.querySelector('.carrusel');
+const prevBtn = document.querySelector('.anterior');
+const nextBtn = document.querySelector('.siguiente');
 const indicators = document.querySelectorAll('.indicator');
 let currentIndex = 0;
-const totalItems = document.querySelectorAll('.carousel-item').length;
+const totalItems = document.querySelectorAll('.carrusel-item').length;
 
 function showProduct(index) {
     if (index >= totalItems) {
