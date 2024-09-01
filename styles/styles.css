@@ -322,6 +322,51 @@ img {
     transition: transform 0.3s ease-in-out;
 }
 
+.contenedor-carrusel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagenes-carrusel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.imagen {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+}
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.flecha img {
+    width: 5%;
+    height: 5%;
+}
+
+.flecha.izquierda {
+    left: 0;
+}
+
+.flecha.derecha {
+    right: 0;
+}
+
 .footer {
     background-color: #471754;
     color: #FFFFFF;
