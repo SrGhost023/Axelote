@@ -190,7 +190,6 @@ ul {
     width: 0;
     visibility: hidden;
     animation: hideInput 0.3s ease forwards;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .buscador.active input {
@@ -199,6 +198,7 @@ ul {
     margin-right: 50px;
     visibility: visible;
     animation: showInput 0.3s ease forwards;
+    box-shadow: 0px 4px 8px #F2445E;
 }
 
 @keyframes showInput {
@@ -416,7 +416,8 @@ img {
     height: 25%;
 }
 
-.contenedor-login {
+.contenedor-login,
+.contenedor-register {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
