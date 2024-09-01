@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Axel Ferreira, Enzo Martinez" />
+    <meta name="keywords" content="Electrónica, Market, Ajolote, Axelote Market, Tienda en Línea, E-Commerce" />
+    <meta name="description" content="Axelote Market es una tienda en línea especializada en productos de electrónica." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Axelote Market - Electrónica</title>
+    <link rel="shortcut icon" href="../images/icons/carrito.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body class="body">
+    <header class="encabezado">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="../images/logo.png" alt="Logo de Axelote Market de Nuestra Mascota Ajolote." />
+                <span class="nombre">Axelote</span>
+            </a>
+            <ul class="menu-inicial">
+                <li class="li menu-desplegable" id="menu_desplegable"><button>Categorías</button></li>
+                <ul class="submenu">
+                    <li><a href="catalogo.html">PCs</a></li>
+                    <li><a href="catalogo.html">Celulares</a></li>
+                    <li><a href="catalogo.html">Tablets</a></li>
+                    <li><a href="catalogo.html">Notebooks</a></li>
+                </ul>
+            </ul>
+            <div class="buscador">
+                <button id="buscar">
+                    <a href="catalogo.html">
+                        <img src="../images/icons/lupa.png" alt="Imagen de una Lupa." />
+                    </a>
+                </button>
+                <input type="text" placeholder="Buscar..." aria-label="Caja de búsqueda" />
+            </div>
+            <ul class="menu-items">
+                <li id="carrito_li">
+                    <a href="carrito.html">
+                        <img src="../images/icons/carrito.png" alt="Imagen de un Carrito con un Ajolote." />
+                    </a>
+                </li>
+                <li class="li"><a href="#">Iniciar Sesión</a></li>
+                <li class="li"><a href="registrarse.html">Registrarse</a></li>
+            </ul>
+            <button id="boton_hamburguesa">
+                <span>&#9776;</span>
+            </button>
+            <ul id="menu_hamburguesa">
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acercaDe.html">Acerca De</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contenedor-login">
+        <div class="logo" id="logo">
+            <img src="../images/logo.png" alt="Logo de Axelote Market de Nuestra Mascota Ajolote." />
+        </div>
+    
+        <article class="contenedor-formulario">
+            <form action="procesar.php">
+                <h2 class="titulo-login">Iniciar Sesión</h2>
+                <label for="nombre-de-usuario">Nombre de Usuario</label>
+                <input type="text" class="nombre-de-usuario" id="nombre_de_usuario" placeholder="Nombre de Usuario" required />
+                  <br />
+                <label for="contrasenia">Contraseña</label>
+                <input type="password" class="contrasenia" id="contrasenia" placeholder="Contraseña" required />
+                  <br />
+                <button type="submit" id="iniciar_sesion">Iniciar Sesión</button>
+                  <br />
+                <a href="recuperarContrasenia.html">¿Olvidaste tu contraseña?</a>
+                  <br />
+                <a href="registrarse.html">¿No tienes una cuenta todavía?, Registrate Ahora. ;D</a>
+            </form>
+        </article>
+    </section>
+
+    <footer class="footer">
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://web.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2024, Todos los Derechos Reservados a Enzo Martinez y Axel Ferreira.</p>
+        <a href="terminosDePrivacidad.html">Términos y Condiciones</a> | <a href="preguntasFrecuentes">Preguntas Frecuentes</a>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
