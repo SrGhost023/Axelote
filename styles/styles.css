@@ -353,6 +353,7 @@ img {
 }
 
 .carrusel-item img {
+    margin: 0 auto;
     width: 100%;
     max-width: 300px;
     border-radius: 10px;
@@ -381,7 +382,6 @@ img {
     right: 10px; /* Ajusta la posición de la imagen de la flecha derecha */
 }
 
-/* Estilos para los indicadores */
 .carrusel-indicadores {
     display: flex;
     justify-content: center;
