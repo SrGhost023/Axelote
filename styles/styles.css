@@ -168,6 +168,7 @@ ul {
     display: block;
 }
 
+/*--------------Buscador----------------*/
 .buscador {
     flex: 1;
     display: flex;
@@ -253,10 +254,12 @@ img {
     display: block;
 }
 
+/*-------------Carrito-------------------*/
+
 #carrito_li {
     margin-left: 20px;
 }
-
+/*-----------------------Menu Hamburguesa-------------------------*/
 #menu_hamburguesa {
     display: none;
     background-color: #471754;
@@ -330,9 +333,9 @@ img {
     width: 80%;
     max-width: 1000px;
     overflow: hidden;
-    border: 2px solid #ddd;
+    border: 2px solid #DEC87A;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #f07951;
     padding-bottom: 40px; /* Espacio para los indicadores */
 }
 
@@ -390,7 +393,7 @@ img {
 .indicator {
     width: 10px;
     height: 10px;
-    background-color: #ddd;
+    background-color: #DEC87A;
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
@@ -398,7 +401,7 @@ img {
 }
 
 .indicator.active {
-    background-color: #333;
+    background-color: #471754;
 }
 
 /*Pie de Pagina*/
