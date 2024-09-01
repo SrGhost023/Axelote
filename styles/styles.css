@@ -6,19 +6,21 @@
     box-sizing: border-box;
 }
 
-body {
+.body {
     font-family: 'Poppins', sans-serif, Arial;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
     background-color: #FFFFFF;
     color: #333333;
 }
 
 .encabezado {
     background-color: #471754;
-    padding: 10px 30px;
+    padding: 10px 10px;
     border-bottom: 2px solid #DEC87A;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -39,6 +41,7 @@ ul {
     align-items: center;
     color: #FFFFFF;
     text-decoration: none;
+    margin-right: 15px;
 }
 
 .logo img {
@@ -63,28 +66,32 @@ ul {
     padding: 0;
 }
 
+.menu-items li:hover {
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    transform: translateY(-2px);
+}
+
 .menu-inicial a,
 .menu-items a,
-#boton_hamburguesa,
-.footer a {
+#boton_hamburguesa {
     margin-left: 10px;
     margin-right: 5px;
     padding: 10px 15px;
     text-decoration: none;
     color: #FFFFFF;
     font-weight: 500;
-    transition: background-color 0.3s, color 0.3s;
     border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 .menu-inicial a:hover,
 .menu-items .li a:hover,
-#boton_hamburguesa:hover,
-.footer a:hover {
+#boton_hamburguesa:hover {
     border-radius: 25px;
     background-color: #991D5D;
     color: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
 }
 
 .menu-inicial {
@@ -94,37 +101,38 @@ ul {
     margin: 0;
     padding: 0;
     position: relative;
+    border-left: 1px solid #DEC87A;
+    border-right: 1px solid #DEC87A;
 }
 
 .menu-desplegable {
     position: relative;
-    margin-left: 10px;
+    margin: 10px;
 }
 
 .menu-desplegable button {
     background-color: transparent;
-    font-size: 17px;
+    font-size: 16px;
     padding: 10px;
     border: none;
     color: #FFFFFF;
     cursor: pointer;
     font-weight: 550;
     border-radius: 25px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 .menu-desplegable button:hover {
     background-color: #991D5D;
     color: #FFFFFF;
     border-radius: 25px;
+    transform: translateY(-2px);
 }
 
 .submenu {
     position: absolute;
     display: flex;
     top: 100%;
-    padding: 0;
-    margin: 0;
     background-color: #471754;
     display: none;
     border: 1px solid #DEC87A;
@@ -220,14 +228,11 @@ ul {
     padding: 0;
 }
 
-.buscador button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
 .buscador button img,
 .menu-items li a img {
     width: 40px;
     height: 40px;
+    margin-right: 10px;
     object-fit: cover;
 }
 
@@ -236,6 +241,10 @@ ul {
     background-color: #FFFFFF;
     border-radius: 100px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buscador input {
+    box-shadow: 0px 4px 8px #F2445E;
 }
 
 img {
@@ -287,6 +296,13 @@ img {
     border: none;
     cursor: pointer;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+#boton_hamburguesa:hover {
+    background-color: #991D5D;
+    color: #FFFFFF;
+    transform: scale(1.1);
 }
 
 #menu_hamburguesa li:hover {
@@ -309,9 +325,56 @@ img {
 .footer {
     background-color: #471754;
     color: #FFFFFF;
-    justify-self: flex-end;
-    justify-content: center;
     text-align: center;
     padding: 10px;
     box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.redes-sociales {
+    margin-bottom: 15px;
+}
+
+.redes-sociales a {
+    color: #DEC87A;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    color: #F2445E;
+    transform: scale(1.2);
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer a {
+    color: #F2445E;
+    text-decoration: none;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.footer a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #F2445E;
+    transition: width 0.3s ease;
+    width: 0;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer a:hover::after {
+    width: 100%;
 }
