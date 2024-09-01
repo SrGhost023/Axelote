@@ -382,7 +382,7 @@ img {
 }
 
 /* Estilos para los indicadores */
-.carousel-indicators {
+.carrusel-indicadores {
     display: flex;
     justify-content: center;
     position: absolute;
@@ -390,7 +390,7 @@ img {
     width: 100%;
 }
 
-.indicator {
+.indicador {
     width: 10px;
     height: 10px;
     background-color: #DEC87A;
@@ -400,7 +400,7 @@ img {
     transition: background-color 0.3s;
 }
 
-.indicator.active {
+.indicador.activo {
     background-color: #471754;
 }
 

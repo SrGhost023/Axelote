@@ -1,7 +1,7 @@
-const carousel = document.querySelector('.carrusel');
+const carrusel = document.querySelector('.carrusel');
 const prevBtn = document.querySelector('.anterior');
 const nextBtn = document.querySelector('.siguiente');
-const indicators = document.querySelectorAll('.indicator');
+const indicadores = document.querySelectorAll('.indicador');
 let currentIndex = 0;
 const totalItems = document.querySelectorAll('.carrusel-item').length;
 
@@ -14,13 +14,13 @@ function showProduct(index) {
         currentIndex = index;
     }
     const offset = -currentIndex * 100;
-    carousel.style.transform = `translateX(${offset}%)`;
-    updateIndicators();
+    carrusel.style.transform = `translateX(${offset}%)`;
+    updateIndicadores();
 }
 
-function updateIndicators() {
-    indicators.forEach((indicator, index) => {
-        indicator.classList.toggle('active', index === currentIndex);
+function updateIndicadores() {
+    indicadores.forEach((indicador, index) => {
+        indicador.classList.toggle('activo', index === currentIndex);
     });
 }
 
@@ -42,8 +42,8 @@ prevBtn.addEventListener('click', () => {
     resetAutoSlide();
 });
 
-indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
+indicadores.forEach((indicador, index) => {
+    indicador.addEventListener('click', () => {
         showProduct(index);
         resetAutoSlide();
     });
