@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Manejar el evento de entrar al área del botón o del buscador
     buscarButton.addEventListener('mouseenter', function () {
-        buscador.classList.add('active');
+        buscador.classList.add('activo');
         const input = buscador.querySelector('input');
         input.focus();
     });
     // Manejar el evento de salir del área del botón o del buscador
     buscador.addEventListener('mouseleave', function () {
-        buscador.classList.remove('active');
+        buscador.classList.remove('activo');
     });
     // Maneja el clic en el botón hamburguesa
     botonHamburguesa.addEventListener('click', function () {
