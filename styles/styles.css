@@ -10,6 +10,7 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -65,9 +66,11 @@ ul {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.05);
     }
+
     100% {
         transform: scale(1);
     }
@@ -284,6 +287,7 @@ img {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -368,13 +372,14 @@ img {
 
 /*------------------------Carrusel-----------------------*/
 
-a .enlaceProducto, p{
+a .enlaceProducto,
+p {
     color: black;
-    text-decoration: none;
     font-size: 20px;
 }
 
-a .enlaceProducto, p:hover{
+a .enlaceProducto,
+p:hover {
     color: #DEC87A;
 }
 
@@ -582,12 +587,18 @@ button#registrarse:hover {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
     }
+
     40% {
         transform: translateY(-20px);
     }
+
     60% {
         transform: translateY(-10px);
     }
