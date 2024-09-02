@@ -10,6 +10,7 @@
     <title>Axelote Market - Electrónica</title>
     <link rel="shortcut icon" href="../images/icons/carrito.png" type="image/x-icon" />
     <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/listaBusqueda.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
@@ -35,7 +36,9 @@
                         <img src="../images/icons/lupa.png" alt="Imagen de una Lupa." />
                     </a>
                 </button>
-                <input type="search" placeholder="Buscar..." aria-label="Caja de búsqueda" />
+                <form id="search-form" action="catalogo.html" method="GET">
+                    <input type="text" id="search-bar" name="query" placeholder="Buscar productos..." required>
+                </form>
             </div>
             <ul class="menu-items">
                 <li id="carrito_li">
@@ -56,6 +59,13 @@
         </nav>
     </header>
 
+    <main>
+        <!-- Contenedor de resultados en forma de lista -->
+        <ul id="search-results" class="product-list">
+            <!-- Los productos filtrados se generarán dinámicamente aquí como elementos de lista -->
+        </ul>
+    </main>
+
     <footer class="footer">
         <div class="redes-sociales">
             <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -68,6 +78,8 @@
         <a href="terminosDePrivacidad.html">Términos y Condiciones</a> | <a href="preguntasFrecuentes.html">Preguntas Frecuentes</a>
     </footer>
     <script src="../js/script.js"></script>
+    <script src="../js/productos.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 
 </html>
