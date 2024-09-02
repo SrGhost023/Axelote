@@ -366,7 +366,17 @@ img {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Carrusel */
+/*------------------------Carrusel-----------------------*/
+
+a .enlaceProducto, p{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a .enlaceProducto, p:hover{
+    color: #DEC87A;
+}
 
 .carrusel-container {
     position: relative;
