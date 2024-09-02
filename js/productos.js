@@ -85,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
             description: "Descripción del Producto 12"
         }
     ];
-
     const productList = document.getElementById('product-list');
 
     products.forEach(product => {

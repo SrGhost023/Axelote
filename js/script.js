@@ -10,19 +10,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const input = buscador.querySelector('input');
         input.focus();
     });
-
     // Manejar el evento de salir del área del botón o del buscador
     buscador.addEventListener('mouseleave', function () {
         buscador.classList.remove('active');
     });
-
     // Maneja el clic en el botón hamburguesa
     botonHamburguesa.addEventListener('click', function () {
         menuHamburguesa.classList.toggle('mostrando');
         this.querySelector('#menu_hamburguesa span').classList.toggle('rotar');
     });
 });
-
 document.getElementById('menu_desplegable').addEventListener('mouseenter', function() {
     var submenu = document.querySelector('.submenu');
     submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
