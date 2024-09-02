@@ -686,7 +686,7 @@ button#registrarse:hover {
 .informacion-contacto h1,
 .formulario-contacto h2,
 .mapa-ubicacion h2 {
-    color: #471754;
+    color: #DEC87A;
     margin-bottom: 15px;
 }
 
@@ -785,6 +785,66 @@ button#registrarse:hover {
     height: 450px;
     margin-top: 20px;
     border-radius: 10px;
+}
+
+/* Términos y Condiciones */
+
+.contenido {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.terminos-contenido {
+    background-color: #471754;
+    padding: 20px;
+    width: 85%;
+    border-bottom: 2px solid #DEC87A;
+    text-align: center;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.terminos-contenido h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #DEC87A;
+    margin: 0;
+}
+
+.terminos-contenido {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333333;
+}
+
+.terminos-contenido h2 {
+    font-size: 28px;
+    color: #471754;
+    margin-bottom: 20px;
+}
+
+.terminos-contenido p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.terminos-contenido ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.terminos-contenido ul li {
+    margin-bottom: 10px;
 }
 
 /* Pie de Página */

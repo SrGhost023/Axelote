@@ -1,8 +1,8 @@
 <?php
   $nombreDelServidorDeLaBaseDeDatos = 'localhost';
   $nombreDeLaBaseDeDatos = 'axelote';
-  $nombreDeUsuarioDeLaBaseDeDatos = 'CultyManager';
-  $contraseniaDeLaBaseDeDatos = 'guseriluadri2024';
+  $nombreDeUsuarioDeLaBaseDeDatos = 'root';
+  $contraseniaDeLaBaseDeDatos = '';
   $conexionALaBaseDeDatos = mysqli_connect($nombreDelServidorDeLaBaseDeDatos, $nombreDeUsuarioDeLaBaseDeDatos, 
                                            $contraseniaDeLaBaseDeDatos, $nombreDeLaBaseDeDatos);
 
