@@ -1,87 +1,60 @@
-/* styles.css */
-
-/* Reset y estilo básico */
 body {
     margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
 }
 
-header {
+.navbar {
     position: relative;
 }
 
-/* Estilos del botón de menú hamburguesa */
-.menu-btn {
-    position: fixed;
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
     top: 20px;
     right: 20px;
-    width: 35px;
-    height: 30px;
-    cursor: pointer;
-    z-index: 1000;
 }
 
-.menu-btn__burger {
-    width: 35px;
-    height: 4px;
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
     background-color: #333;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    position: relative;
+    margin: 5px auto;
+    transition: 0.3s;
 }
 
-.menu-btn__burger::before,
-.menu-btn__burger::after {
-    content: '';
-    position: absolute;
-    width: 35px;
-    height: 4px;
-    background-color: #333;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.menu-btn__burger::before {
-    transform: translateY(-10px);
-}
-
-.menu-btn__burger::after {
-    transform: translateY(10px);
-}
-
-/* Estilos del menú de navegación */
-.nav {
-    height: 100vh;
-    width: 250px;
-    background-color: #f4f4f4;
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     position: fixed;
     top: 0;
-    right: -250px; /* Ocultar el menú inicialmente */
-    transition: all 0.3s ease;
-    z-index: 500; /* Aseguramos que el menú esté debajo del botón */
+    right: -250px; /* Inicialmente escondido a la derecha */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: right 0.3s ease;
 }
 
-.nav.open { /* Mostrar el menú cuando se active */
-    right: 0;
+.nav-list.active {
+    right: 0; /* Muestra el menú */
 }
 
-.nav__list {
-    list-style: none;
-    padding: 0;
-    margin-top: 60px;
+.nav-list li {
+    margin: 0;
 }
 
-.nav__item {
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    display: block;
     padding: 15px;
     text-align: center;
+    border-bottom: 1px solid #444;
 }
 
-.nav__item a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    display: block;
+.nav-list a:hover {
+    background-color: #575757;
 }
-
-

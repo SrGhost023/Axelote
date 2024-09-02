@@ -1,11 +1,8 @@
-// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navList = document.getElementById('nav-list');
 
-document.addEventListener('DOMContentLoaded', function() {
-    const menuBtn = document.querySelector('.menu-btn');
-    const nav = document.querySelector('.nav');
-
-    menuBtn.addEventListener('click', function() {
-        menuBtn.classList.toggle('open'); // Alterna la clase 'open'
-        nav.classList.toggle('open');     // Alterna la clase 'open' para el menú
+    menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
     });
 });
