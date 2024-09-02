@@ -463,6 +463,11 @@ a .enlaceProducto, p:hover{
     height: 25%;
 }
 
+#logo:hover,
+.imagen-register:hover {
+    animation: bounce 1s;
+}
+
 .contenedor-login,
 .contenedor-register {
     display: flex;
