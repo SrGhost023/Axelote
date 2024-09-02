@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Virtual</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Resultados de Búsqueda</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <section class="tienda">
         <header>
-            <h1>Tienda Virtual</h1>
+            <a href="index.html"><h1>Resultados de Búsqueda</h1></a>
             <nav>
                 <!-- Opcional: Añadir enlaces de navegación aquí -->
             </nav>
-            <!-- Barra de búsqueda con formulario para redirección -->
+            <!-- Barra de búsqueda para realizar una nueva búsqueda -->
             <form id="search-form" action="resultados.html" method="GET">
                 <input type="text" id="search-bar" name="query" placeholder="Buscar productos..." required>
             </form>
         </header>
 
         <main>
-            <section id="product-list" class="product-list">
-                <!-- Los productos se generarán dinámicamente aquí -->
-            </section>
+            <!-- Contenedor de resultados en forma de lista -->
+            <ul id="search-results" class="product-list">
+                <!-- Los productos filtrados se generarán dinámicamente aquí como elementos de lista -->
+            </ul>
         </main>
 
         <footer>
@@ -30,6 +31,6 @@
         </footer>
     </section>
 
-    <script src="script.js"></script>
+    <script src="search.js"></script>
 </body>
 </html>

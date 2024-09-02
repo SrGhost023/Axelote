@@ -14,34 +14,40 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 12, name: "Producto 12", price: 650.00, image: "https://via.placeholder.com/150", description: "Descripción del Producto 12" }
     ];
 
-    const productList = document.getElementById('product-list');
+    // Obtener el término de búsqueda de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchTerm = urlParams.get('query').toLowerCase();
+
+    const searchResults = document.getElementById('search-results');
 
     function displayProducts(filteredProducts) {
-        productList.innerHTML = ''; // Limpiar la lista de productos
-        filteredProducts.forEach(product => {
-            const productItem = document.createElement('div');
-            productItem.className = 'product-item';
-            productItem.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
-                <h3>${product.name}</h3>
-                <p>${product.description}</p>
-                <p><strong>Precio: $${product.price.toFixed(2)}</strong></p>
-                <button>Añadir al carrito</button>
-            `;
-            productList.appendChild(productItem);
-        });
+        searchResults.innerHTML = ''; // Limpiar la lista de productos
+        if (filteredProducts.length === 0) {
+            searchResults.innerHTML = '<p>No se encontraron productos.</p>';
+        } else {
+            filteredProducts.forEach(product => {
+                const productItem = document.createElement('li'); // Cambiar de 'div' a 'li'
+                productItem.className = 'product-item';
+                productItem.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <p><strong>Precio: $${product.price.toFixed(2)}</strong></p>
+                    </div>
+                    <button>Añadir al carrito</button>
+                `;
+                searchResults.appendChild(productItem);
+            });
+        }
     }
 
-    // Mostrar todos los productos al cargar la página
-    displayProducts(products);
+    // Filtrar productos según el término de búsqueda
+    const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(searchTerm) ||
+        product.description.toLowerCase().includes(searchTerm)
+    );
 
-    // Función de filtrado de productos
-    window.filterProducts = function() {
-        const searchTerm = document.getElementById('search-bar').value.toLowerCase();
-        const filteredProducts = products.filter(product => 
-            product.name.toLowerCase().includes(searchTerm) || 
-            product.description.toLowerCase().includes(searchTerm)
-        );
-        displayProducts(filteredProducts);
-    };
+    // Mostrar productos filtrados
+    displayProducts(filteredProducts);
 });
