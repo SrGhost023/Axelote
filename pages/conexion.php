@@ -10,4 +10,3 @@
     die("Error de Conexión: " . mysqli_connect_error());
   }
   echo "Conexión Exitosa";
-  mysqli_close($conexionALaBaseDeDatos);
