@@ -35,7 +35,7 @@
                         <img src="../images/icons/lupa.png" alt="Imagen de una Lupa." />
                     </a>
                 </button>
-                <input type="text" placeholder="Buscar..." aria-label="Caja de búsqueda" />
+                <input type="search" placeholder="Buscar..." aria-label="Caja de búsqueda" />
             </div>
             <ul class="menu-items">
                 <li id="carrito_li">
@@ -57,14 +57,60 @@
     </header>
 
     <section class="contenedor-register">
-        <article class="contenedor-formulario">
+        <article class="contenedor-formulario-register">
             <form action="procesar.php" method="POST" class="formulario">
                 <h2 class="registrarse-titulo">Registrarse</h2>
-
+                <div class="grupos-de-inputs">
+                    <div>
+                        <label for="nombre-real">Nombre Real</label>
+                        <input type="text" class="nombre-real" id="nombre_real" placeholder="Nombre Real" required />
+                    </div>
+                    <div>
+                        <label for="apellido-real">Apellido Real</label>
+                        <input type="text" class="apellido-real" id="apellido_real" placeholder="Apellido Real" required />
+                    </div>
+                </div>
+                  <br />
+                <div class="grupos-de-inputs">
+                    <div>
+                        <label for="nombre-de-usuario">Nombre de Usuario</label>
+                        <input type="text" class="nombre-de-usuario" id="nombre_de_usuario" placeholder="Nombre de Usuario" required />
+                    </div>
+                    <div>
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" name="email" id="email" placeholder="Correo Electrónico" required />
+                    </div>
+                </div>
+                  <br />
+                <div class="grupos-de-inputs">
+                    <div>
+                        <label for="direccion">Dirección</label>
+                        <input type="text" class="direccion" id="direccion" placeholder="Dirección" required />
+                    </div>
+                    <div>
+                        <label for="fecha-de-nacimiento">Fecha de Nacimiento</label>
+                        <input type="date" name="fecha-de-nacimiento" id="fecha_de_nacimiento" required />
+                    </div>
+                </div>
+                  <br />
+                <div class="grupos-de-inputs">
+                    <div>
+                        <label for="contrasenia">Contraseña</label>
+                        <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required />
+                    </div>
+                    <div>
+                        <label for="contrasenia-repetida">Repetir Contraseña</label>
+                        <input type="password" name="contrasenia-repetida" id="contrasenia_repetida" placeholder="Repetir Contraseña" required />
+                    </div>
+                </div>
+                  <br />
+                <button type="submit" id="registrarse">Registrarse</button>
+                  <br />
+                <a href="iniciarSesion.html">¿Ya tienes una cuenta? Inicia Sesión. ;D</a>
             </form>
         </article>
-        <div id="logo">
-            <img src="../images/icons/imagenRegister.jpeg" alt="Imagen de un Ajolote con una Libreta." />
+        <div class="imagen-register">
+            <img src="../images/icons/imagenRegister.png" alt="Imagen de un Ajolote con una Libreta y un Marcador Anotando tu Usuario." />
         </div>
     </section>
 
