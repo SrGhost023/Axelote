@@ -11,7 +11,6 @@
     <title>Axelote Market - Electrónica</title>
     <link rel="shortcut icon" href="../images/icons/carrito.png" type="image/x-icon" />
     <link rel="stylesheet" href="../styles/styles.css" />
-    <link rel="stylesheet" href="../styles/listaProductos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
@@ -19,16 +18,16 @@
     <header class="encabezado">
         <nav class="navbar">
             <a href="#" class="logo">
-                <img src="../images/logo.png" alt="Logo de Axelote Market de Nuestra Mascota Ajolote." />
+                <img src="../images/logo.png" alt="Logo de Axelote Market de Nuestra Mascota Ajolote." title="Logo Axelote." />
                 <span class="nombre">Axelote</span>
             </a>
             <ul class="menu-inicial">
                 <li class="li menu-desplegable" id="menu_desplegable"><button>Categorías</button></li>
                 <ul class="submenu">
-                    <li><a href="catalogo.html/PC">PCs</a></li>
-                    <li><a href="catalogo.html/Celular">Celulares</a></li>
-                    <li><a href="catalogo.html/Tablet">Tablets</a></li>
-                    <li><a href="catalogo.html/Notebook">Notebooks</a></li>
+                    <li><a href="catalogo.html/?categoria=PC">PCs</a></li>
+                    <li><a href="catalogo.html/?categoria=Celular">Celulares</a></li>
+                    <li><a href="catalogo.html/?categoria=Tablet">Tablets</a></li>
+                    <li><a href="catalogo.html/?categoria=Notebook">Notebooks</a></li>
                 </ul>
             </ul>
             <div class="buscador">
@@ -63,26 +62,26 @@
     <section class="carrusel-container">
         <article class="carrusel">
             <div class="carrusel-item">
-                <a href="#" class="enlaceProducto">
+                <a href="#" class="enlace-producto">
                     <img src="../images/products/producto.jpeg" alt="Producto 1." />
                     <p>Celular Samsung Gamer 256GB/32GB</p>
                 </a>
             </div>
             <div class="carrusel-item">
-                <a href="#" class="enlaceProducto">
+                <a href="#" class="enlace-producto">
                     <img src="../images/products/producto2.jpeg" alt="Producto 2." />
                     <p>Notebook Gamer 1TB/64GB</p>
                 </a>
             </div>
             <div class="carrusel-item">
-                <a href="#" class="enlaceProducto">
+                <a href="#" class="enlace-producto">
                     <img src="../images/products/producto3.jpeg" alt="Producto 3." />
                     <p>Combo PC Gamer + Silla Gamer + Escritorio</p>
                 </a>
             </div>
         </article>
-        <img src="../images/icons/flechaIzquierda.png" class="nav-btn anterior" alt="Imagen de una Aleta de Ajolote Izquierda." />
-        <img src="../images/icons/flechaDerecha.png" class="nav-btn siguiente" alt="Imagen de una Aleta de Ajolote Derecha." />
+        <img src="../images/icons/flechaIzquierda.png" class="nav-btn anterior" alt="Ir al anterior producto" aria-label="Anterior" />
+        <img src="../images/icons/flechaDerecha.png" class="nav-btn siguiente" alt="Ir al siguiente producto" aria-label="Siguiente" />        
         <div class="carrusel-indicadores">
             <span class="indicador activo"></span>
             <span class="indicador"></span>

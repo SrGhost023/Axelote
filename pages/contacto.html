@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="author" content="Axel Ferreira, Enzo Martinez" />
     <meta name="keywords" content="Electrónica, Market, Ajolote, Axelote Market, Tienda en Línea, E-Commerce" />
-    <meta name="description" content="Axelote Market es una tienda en línea especializada en productos de electrónica." />
+    <meta name="description" content="Contáctanos en Axelote Market para cualquier consulta o información adicional." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Axelote Market - Electrónica</title>
     <link rel="shortcut icon" href="../images/icons/carrito.png" type="image/x-icon" />
@@ -17,16 +17,17 @@
     <header class="encabezado">
         <nav class="navbar">
             <a href="index.html" class="logo">
-                <img src="../images/logo.png" alt="Logo de Axelote Market de Nuestra Mascota Ajolote." />
+                <img src="../images/logo.png" alt="Logo de Axelote Market de Nuestra Mascota Ajolote."
+                    title="Logo Axelote." />
                 <span class="nombre">Axelote</span>
             </a>
             <ul class="menu-inicial">
                 <li class="li menu-desplegable" id="menu_desplegable"><button>Categorías</button></li>
                 <ul class="submenu">
-                    <li><a href="catalogo.html">PCs</a></li>
-                    <li><a href="catalogo.html">Celulares</a></li>
-                    <li><a href="catalogo.html">Tablets</a></li>
-                    <li><a href="catalogo.html">Notebooks</a></li>
+                    <li><a href="catalogo.html/?categoria=PC">PCs</a></li>
+                    <li><a href="catalogo.html/?categoria=Celular">Celulares</a></li>
+                    <li><a href="catalogo.html/?categoria=Tablet">Tablets</a></li>
+                    <li><a href="catalogo.html/?categoria=Notebook">Notebooks</a></li>
                 </ul>
             </ul>
             <div class="buscador">
@@ -35,7 +36,9 @@
                         <img src="../images/icons/lupa.png" alt="Imagen de una Lupa." />
                     </a>
                 </button>
-                <input type="search" placeholder="Buscar..." aria-label="Caja de búsqueda" />
+                <form id="search-form" action="catalogo.html" method="GET">
+                    <input type="search" id="search-bar" name="query" placeholder="Buscar productos..." required />
+                </form>
             </div>
             <ul class="menu-items">
                 <li id="carrito_li">
@@ -55,6 +58,52 @@
             </ul>
         </nav>
     </header>
+
+    <main class="contacto">
+        <section class="informacion-contacto">
+            <h1>Contacto</h1>
+            <p>¿Tienes alguna pregunta o necesitas más información? No dudes en contactarnos.</p>
+            <ul class="datos-contacto">
+                <li><i class="fas fa-phone-alt"></i> Teléfono: +598 92 839 243.</li>
+                <li><i class="fas fa-envelope"></i> Correo: axelotemarket2024@axelotemarket.com.</li>
+                <li><i class="fas fa-map-marker-alt"></i> Dirección: Calle Batoví & Hocquart 11800 Montevideo, Uruguay.</li>
+            </ul>
+        </section>
+
+        <section class="formulario-contacto">
+            <article class="contenedor-consulta">
+                <div class="formulario-consulta">
+                    <h2>Envíanos un Mensaje</h2>
+                    <form action="enviarContacto.php" method="POST">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+                          <br />
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required />
+                          <br />
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" placeholder="Asunto de tu mensaje" required />
+                          <br />
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                    </form>
+                </div>
+                <div class="imagen-consulta">
+                    <img src="../images/icons/imagenConsulta.png" alt="Imagen de un Ajolote con un Papel y unos Lentes Revisando su Consulta." />
+                </div>
+            </article>
+        </section>
+
+        <section class="mapa-ubicacion">
+            <h2>Nuestra Ubicación</h2>
+            <!-- Integración de un mapa de Google Maps -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.7424964118675!2d-56.18882658431745!3d-34.89351582884932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f8b31f4b4e8a3%3A0x944a41d35a752f44!2sBatov%C3%AD%20%26%20Hocquart%2C%2011700%20Montevideo%2C%20Uruguay!5e0!3m2!1ses-419!2suy!4v1693594978361!5m2!1ses-419!2suy"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>        
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="redes-sociales">
