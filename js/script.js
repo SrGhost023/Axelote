@@ -10,19 +10,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const input = buscador.querySelector('input');
         input.focus();
     });
-
     // Mantener el buscador visible mientras el input está enfocado
     buscador.addEventListener('focusin', function () {
         buscador.classList.add('activo');
     });
-
     // Manejar el clic fuera del buscador para ocultarlo
     document.addEventListener('click', function (event) {
         if (!buscador.contains(event.target) && event.target !== buscarButton) {
             buscador.classList.remove('activo');
         }
     });
-
     // Maneja el clic en el botón hamburguesa
     botonHamburguesa.addEventListener('click', function () {
         menuHamburguesa.classList.toggle('mostrando');
