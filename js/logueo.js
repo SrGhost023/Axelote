@@ -4,9 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Usar localStorage, sessionStorage o una cookie para verificar el estado de sesión
     let isLoggedIn = sessionStorage.getItem('loggedIn'); // Usando sessionStorage
 
+    console.log(isLoggedIn);
     if (isLoggedIn === 'true') {
         // Mostrar la imagen de perfil y esconder los botones de inicio de sesión y registro
-        document.getElementById('iniciar-sesion').style.display = 'none';
+        document.getElementById('iniciar_sesion').style.display = 'none';
         document.getElementById('registrarse').style.display = 'none';
         document.getElementById('perfil').style.display = 'block';
     } else {
@@ -18,12 +19,10 @@ document.addEventListener('DOMContentLoaded', function () {
 // Función para iniciar sesión
 function iniciarSesion(event) {
     event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
-
-    // Aquí se debe agregar la lógica de autenticación.
-    // Suponemos que el inicio de sesión es exitoso.
     
     // Guardar el estado de la sesión
     sessionStorage.setItem('loggedIn', 'true');
+    console.log(sessionStorage.getItem('loggedIn'));
     
     // Redireccionar al index después del inicio de sesión
     window.location.href = 'index.html';
@@ -35,7 +34,7 @@ function cerrarSesion() {
     sessionStorage.removeItem('loggedIn');
     
     // Ocultar el botón de "Cerrar Sesión" después de cerrar sesión
-    document.getElementById('cerrar-sesion').style.display = 'none';
+    document.getElementById('cerrar_sesion').style.display = 'none';
 
     // Redireccionar a la página de inicio de sesión o a la página de inicio
     window.location.href = 'iniciarSesion.html'; // O usa 'index.html' si prefieres redirigir al inicio
