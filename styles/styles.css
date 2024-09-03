@@ -749,11 +749,11 @@ button#registrarse:hover {
     text-align: center;
 }
 
-.informacion-contacto h1,
 .formulario-contacto h2,
 .mapa-ubicacion h2 {
     color: #DEC87A;
     margin-bottom: 15px;
+    font-size: 40px;
 }
 
 .datos-contacto {
@@ -771,8 +771,9 @@ button#registrarse:hover {
 .formulario-contacto {
     display: flex;
     justify-content: center;
-    background-color: #F2445E;
+    background-color: #f07951;
     padding: 30px;
+    border: #DEC87A solid 6px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -785,6 +786,7 @@ button#registrarse:hover {
 }
 
 .imagen-consulta img {
+    margin: 120px;
     width: 70%;
     height: 70%;
 }
@@ -911,6 +913,11 @@ button#registrarse:hover {
 
 .terminos-contenido ul li {
     margin-bottom: 10px;
+}
+
+.linkContacto{
+    color: #f07951;
+    text-decoration: none;
 }
 
 /*-----------------------------------Preguntas Frecuentes-----------------------------*/
