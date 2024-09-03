@@ -134,6 +134,7 @@ ul {
 }
 
 /*------------------------Categorias-----------------------------*/
+
 .menu-desplegable {
     position: relative;
     margin: 10px;
@@ -167,6 +168,7 @@ ul {
     margin: 0;
     border: 1px solid #ccc;
     z-index: 10;
+    border-radius: 25px;
 }
 
 .menu-desplegable:hover .submenu {
@@ -198,9 +200,8 @@ ul {
 }
 
 .submenu.visible {
-    display: block; /* Muestra el submenú */
+    display: block;
 }
-
 
 /*--------------Buscador----------------*/
 
@@ -631,6 +632,7 @@ button#registrarse:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     background-color: #ffffff;
     padding: 20px;
     gap: 20px;
@@ -681,7 +683,10 @@ button#registrarse:hover {
 
 .lista-productos {
     list-style-type: none;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
     margin: 40px auto;
     width: 100%;
     background-color: white;
@@ -736,7 +741,6 @@ button#registrarse:hover {
     color: #000000;
     background-color: #DEC87A;
 }
-
 
 /*------------------------------Formulario de contacto-------------------------------*/
 
@@ -928,7 +932,6 @@ button#registrarse:hover {
 
 /*-----------------------------------Preguntas Frecuentes-----------------------------*/
 
-/* Estilos para la sección de preguntas frecuentes */
 .faq {
     background-color: #f0f9ff;
     padding: 30px;
@@ -979,6 +982,7 @@ button#registrarse:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+<<<<<<< HEAD
 /*-------------------------------------Acerca de--------------------------------------*/
 
 .Acerca {
@@ -1014,6 +1018,8 @@ button#registrarse:hover {
     margin-bottom: 20px;
 }
 
+=======
+>>>>>>> 43d235a25edbeb65c7f87650cbab601299295d38
 /*-------------------------------------Pie de Página----------------------------------*/
 
 .footer {
