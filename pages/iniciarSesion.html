@@ -65,20 +65,18 @@
             <img src="../images/logo.png" alt="Logo de Axelote Market de Nuestra Mascota Ajolote." />
         </div>
         <article class="contenedor-formulario">
-            <form action="iniciarSesion.php" method="POST" class="formulario">
+            <form action="iniciarSesion.php" method="POST" class="formulario" onsubmit="iniciarSesion(event);">
                 <h2 class="titulo-login">Iniciar Sesión</h2>
                 <label for="nombre-de-usuario">Nombre de Usuario</label>
-                <input type="text" class="nombre-de-usuario" id="nombre_de_usuario" placeholder="Nombre de Usuario" required />
-                  <br />
+                <input type="text" class="nombre-de-usuario" id="nombre_de_usuario" name="nombre_de_usuario" placeholder="Nombre de Usuario" required />
                 <label for="contrasenia">Contraseña</label>
-                <input type="password" class="contrasenia" id="contrasenia" placeholder="Contraseña" required />
-                  <br />
+                <input type="password" class="contrasenia" id="contrasenia" name="contrasenia" placeholder="Contraseña" required />
                 <button type="submit" id="iniciar_sesion">Iniciar Sesión</button>
-                  <br />
                 <a href="recuperarContrasenia.html">¿Olvidaste tu contraseña?</a>
-                  <br />
                 <a href="registrarse.html">¿No tienes una cuenta todavía?, Registrate Ahora. ;D</a>
             </form>
+            
+            
         </article>
     </section>
 

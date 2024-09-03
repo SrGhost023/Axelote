@@ -350,8 +350,8 @@ img {
     right: -250px;
     width: 250px;
     height: 100%;
-    background-color: #fff;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
+    background-color: #471754;
+    box-shadow: -4px 0 10px #f07951;
     transition: right 0.3s ease;
     z-index: 1000;
 }
@@ -368,8 +368,16 @@ img {
 
 .menu-hamburguesa a {
     text-decoration: none;
-    color: #333;
+    color: white;
     font-size: 18px;
+}
+
+.menu-hamburguesa a:hover{
+    background-color: #991D5D;
+    color: #FFFFFF;
+    border-radius: 25px;
+    transform: translateY(-2px);
+    padding: 15px;
 }
 
 .menu-hamburguesa.mostrando {
