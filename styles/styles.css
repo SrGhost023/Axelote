@@ -477,8 +477,8 @@ img {
 
 #logo,
 .imagen-register {
-    width: 35%;
-    height: 35%;
+    width: 30%;
+    height: 30%;
 }
 
 #logo:hover,
@@ -489,7 +489,7 @@ img {
 .contenedor-login,
 .contenedor-register {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
@@ -503,8 +503,12 @@ img {
     justify-content: center;
     text-align: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    width: 20%;
     margin: 20px;
+}
+
+.contenedor-formulario-register {
+    width: 40%;
 }
 
 .formulario {
@@ -580,13 +584,10 @@ button#registrarse:hover {
 
 /*-----------------------Registrarse---------------------*/
 
-.contenedor-formulario-register {
-    width: 50%;
-}
-
 .grupos-de-inputs {
     display: flex;
     gap: 20px;
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
@@ -990,7 +991,7 @@ button#registrarse:hover {
 
 /*-------------------------------------Acerca de--------------------------------------*/
 
-.Acerca {
+.acerca {
     max-width: 95%;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -1000,7 +1001,7 @@ button#registrarse:hover {
     padding: 20px;
 }
 
-.AcercaDe {
+.acercaDe {
     background-color: #FFFFFF;
     text-align: center;
     border-radius: 10px;
@@ -1010,14 +1011,14 @@ button#registrarse:hover {
     color: #333333;
 }
 
-.AcercaDe h1 {
+.acercaDe h1 {
     font-size: 36px;
     font-weight: bold;
     color: #DEC87A;
     margin: 0;
 }
 
-.AcercaDe p {
+.acercaDe p {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
