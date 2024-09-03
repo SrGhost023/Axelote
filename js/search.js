@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             filteredProducts.forEach(product => {
                 const productItem = document.createElement('li');
-                productItem.className = 'product-item';
+                productItem.className = 'producto';
                 productItem.innerHTML = `
                     <img src="${product.url_de_la_imagen}" alt="${product.nombre}" />
                     <div class="product-info">

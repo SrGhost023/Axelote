@@ -5,22 +5,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuHamburguesa = document.getElementById('menu_hamburguesa');
 
     // Manejar el evento de entrar al área del botón o del buscador
-    buscarButton.addEventListener('mouseenter', function () {
+    buscarButton.addEventListener('click', function () {
         buscador.classList.add('activo');
         const input = buscador.querySelector('input');
         input.focus();
     });
-    // Manejar el evento de salir del área del botón o del buscador
-    buscador.addEventListener('mouseleave', function () {
-        buscador.classList.remove('activo');
+
+    // Mantener el buscador visible mientras el input está enfocado
+    buscador.addEventListener('focusin', function () {
+        buscador.classList.add('activo');
     });
+
+    // Manejar el clic fuera del buscador para ocultarlo
+    document.addEventListener('click', function (event) {
+        if (!buscador.contains(event.target) && event.target !== buscarButton) {
+            buscador.classList.remove('activo');
+        }
+    });
+
     // Maneja el clic en el botón hamburguesa
     botonHamburguesa.addEventListener('click', function () {
         menuHamburguesa.classList.toggle('mostrando');
         this.querySelector('#menu_hamburguesa span').classList.toggle('rotar');
     });
-});
-document.getElementById('menu_desplegable').addEventListener('mouseenter', function() {
-    var submenu = document.querySelector('.submenu');
-    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
 });

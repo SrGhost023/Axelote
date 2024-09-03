@@ -309,6 +309,7 @@ img {
     animation: rotate 1s infinite;
 }
 
+
 /*-------------Carrito-------------------*/
 
 #carrito_li {
@@ -578,7 +579,7 @@ button#registrarse:hover {
     color: #471754;
 }
 
-/* Registrarse */
+/*-----------------------Registrarse---------------------*/
 
 .contenedor-formulario-register {
     width: 50%;
@@ -618,13 +619,13 @@ button#registrarse:hover {
     }
 }
 
-/* Productos */
+/*----------------------Productos-index-----------------------*/
 
 .product-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #F2445E;
+    background-color: #ffffff;
     padding: 20px;
     gap: 20px;
 }
@@ -638,7 +639,7 @@ button#registrarse:hover {
 
 .product-item img {
     justify-content: center;
-    max-width: 100%;
+    max-width: 150px;
     height: auto;
     border-radius: 5px;
     margin: 0 auto;
@@ -646,7 +647,7 @@ button#registrarse:hover {
 
 .product-item h3 {
     font-size: 1.2em;
-    color: #DEC87A;
+    color: #f07951;
     margin: 10px 0;
 }
 
@@ -670,7 +671,68 @@ button#registrarse:hover {
     color: #000000;
 }
 
-/* Formulario de contacto */
+/*---------------------------------Lista-productos-----------------------------------*/
+
+.lista-productos {
+    list-style-type: none;
+    padding: 0;
+    margin: 40px auto;
+    width: 100%;
+    background-color: white;
+}
+
+.producto {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.producto .product-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.producto h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+}
+
+.producto p {
+    margin: 5px 0;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.producto button {
+    padding: 10px 15px;
+    background-color: #471754;
+    color: #E9E9E9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    align-self: flex-end;
+}
+
+.producto button:hover {
+    color: #000000;
+    background-color: #DEC87A;
+}
+
+
+/*------------------------------Formulario de contacto-------------------------------*/
 
 .contacto {
     padding: 20px;
@@ -757,7 +819,7 @@ button#registrarse:hover {
     box-shadow: 0px 4px 8px rgba(153, 29, 93, 0.2);
 }
 
-/* Botón de enviar */
+/*-------------------------------Botón de enviar----------------------------*/
 
 .btn-enviar {
     padding: 10px 20px;
@@ -791,10 +853,10 @@ button#registrarse:hover {
     border-radius: 10px;
 }
 
-/* Términos y Condiciones */
+/*----------------------------Términos y Condiciones-----------------------------------*/
 
 .contenido {
-    max-width: 800px;
+    max-width: 95%;
     margin: 0 auto;
     margin-bottom: 20px;
     display: flex;
@@ -851,7 +913,61 @@ button#registrarse:hover {
     margin-bottom: 10px;
 }
 
-/* Pie de Página */
+/*-----------------------------------Preguntas Frecuentes-----------------------------*/
+
+/* Estilos para la sección de preguntas frecuentes */
+.faq {
+    background-color: #f0f9ff;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 8px;
+    width: 95%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq h2 {
+    text-align: center;
+    color: #471754;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.faq details {
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq summary {
+    font-weight: bold;
+    font-size: 18px;
+    color: #991D5D;
+    outline: none;
+}
+
+.faq details[open] summary {
+    color: #f07951;
+}
+
+.faq details p {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    color: #471754;
+    line-height: 1.6;
+}
+
+.faq details:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/*-------------------------------------Pie de Página----------------------------------*/
 
 .footer {
     background-color: #471754;
