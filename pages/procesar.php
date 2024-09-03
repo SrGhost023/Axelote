@@ -1,16 +1,19 @@
 <?php
-  require "conexion.php";
-  $seleccionDeLaTablaUsuarios = "SELECT * FROM usuario";
-  $resultadoDeLaSeleccionDeUsuarios = $conexionALaBaseDeDatos->query($seleccionDeLaTablaUsuarios);
+require "conexion.php";
 
-  if ($resultadoDeLaSeleccionDeUsuarios === FALSE)
-      die("Error en la consulta: " . $conexionALaBaseDeDatos->error);
-  if ($resultadoDeLaSeleccionDeUsuarios->num_rows > 0) {
-      while ($fila = $resultadoDeLaSeleccionDeUsuarios->fetch_assoc()) {
-          echo "ID: " . $fila["id"] . " - Nombre: " . $fila["nombre_real"] . " " . $fila["apellido_real"] . 
-          " - Usuario: " . $fila["nombre_de_usuario"] . " - Correo: " . $fila["email"] . "<br />";
-      }
-  } else {
-      echo "0 resultados";
-  }
-  $conexionALaBaseDeDatos->close();
+$seleccionDeLaTablaProductos = "SELECT * FROM producto";
+$resultadoDeLaSeleccionDeProductos = $conexionALaBaseDeDatos->query($seleccionDeLaTablaProductos);
+
+if ($resultadoDeLaSeleccionDeProductos === FALSE) {
+    die("Error en la consulta: " . $conexionALaBaseDeDatos->error);
+}
+
+$productos = array();
+while ($fila = $resultadoDeLaSeleccionDeProductos->fetch_assoc()) {
+    $productos[] = $fila;
+}
+
+header('Content-Type: application/json');
+echo json_encode($productos);
+
+$conexionALaBaseDeDatos->close();
