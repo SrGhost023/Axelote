@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const buscador = document.querySelector('.buscador');
     const botonHamburguesa = document.getElementById('boton_hamburguesa');
     const menuHamburguesa = document.getElementById('menu_hamburguesa');
+    const menuDesplegable = document.getElementById('menu_desplegable');
+    const submenu = menuDesplegable.querySelector('.submenu');
 
     // Manejar el evento de entrar al área del botón o del buscador
     buscarButton.addEventListener('click', function () {
@@ -25,11 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
         menuHamburguesa.classList.toggle('mostrando');
         this.querySelector('#menu_hamburguesa span').classList.toggle('rotar');
     });
-});
-document.addEventListener("DOMContentLoaded", function() {
-    const menuDesplegable = document.getElementById('menu_desplegable');
-    const submenu = menuDesplegable.querySelector('.submenu');
-
     menuDesplegable.querySelector('button').addEventListener('click', function(event) {
         event.preventDefault(); // Evita el comportamiento predeterminado del botón
         submenu.classList.toggle('visible'); // Alterna la clase 'visible'
