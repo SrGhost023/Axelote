@@ -133,6 +133,7 @@ ul {
     border-right: 1px solid #DEC87A;
 }
 
+/*------------------------Categorias-----------------------------*/
 .menu-desplegable {
     position: relative;
     margin: 10px;
@@ -158,16 +159,20 @@ ul {
 }
 
 .submenu {
-    position: absolute;
-    display: flex;
-    top: 100%;
-    background-color: #471754;
     display: none;
-    border: 1px solid #DEC87A;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 25px;
-    z-index: 1000;
+    position: absolute;
+    background-color: #471754;
+    list-style: none;
+    padding: 10px; 
+    margin: 0;
+    border: 1px solid #ccc;
+    z-index: 10;
 }
+
+.menu-desplegable:hover .submenu {
+    display: block;
+}
+
 
 .submenu li {
     border-bottom: 1px solid #DEC87A;
@@ -192,9 +197,10 @@ ul {
     border-radius: 25px;
 }
 
-.menu-desplegable:hover .submenu {
-    display: block;
+.submenu.visible {
+    display: block; /* Muestra el submenú */
 }
+
 
 /*--------------Buscador----------------*/
 
@@ -749,11 +755,11 @@ button#registrarse:hover {
     text-align: center;
 }
 
-.informacion-contacto h1,
 .formulario-contacto h2,
 .mapa-ubicacion h2 {
     color: #DEC87A;
     margin-bottom: 15px;
+    font-size: 40px;
 }
 
 .datos-contacto {
@@ -771,8 +777,9 @@ button#registrarse:hover {
 .formulario-contacto {
     display: flex;
     justify-content: center;
-    background-color: #F2445E;
+    background-color: #f07951;
     padding: 30px;
+    border: #DEC87A solid 6px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -785,6 +792,7 @@ button#registrarse:hover {
 }
 
 .imagen-consulta img {
+    margin: 120px;
     width: 70%;
     height: 70%;
 }
@@ -911,6 +919,11 @@ button#registrarse:hover {
 
 .terminos-contenido ul li {
     margin-bottom: 10px;
+}
+
+.linkContacto{
+    color: #f07951;
+    text-decoration: none;
 }
 
 /*-----------------------------------Preguntas Frecuentes-----------------------------*/

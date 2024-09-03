@@ -26,3 +26,12 @@ document.addEventListener('DOMContentLoaded', function () {
         this.querySelector('#menu_hamburguesa span').classList.toggle('rotar');
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const menuDesplegable = document.getElementById('menu_desplegable');
+    const submenu = menuDesplegable.querySelector('.submenu');
+
+    menuDesplegable.querySelector('button').addEventListener('click', function(event) {
+        event.preventDefault(); // Evita el comportamiento predeterminado del botón
+        submenu.classList.toggle('visible'); // Alterna la clase 'visible'
+    });
+});
