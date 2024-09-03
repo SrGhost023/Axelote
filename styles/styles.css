@@ -325,70 +325,57 @@ img {
 
 /*-----------------------Menu Hamburguesa-------------------------*/
 
-#menu_hamburguesa {
-    display: none;
-    background-color: #471754;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    border: 1px solid #DEC87A;
-    z-index: 10;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-}
-
-#menu_hamburguesa li {
-    padding: 15px 0;
-    border-bottom: 1px solid #DEC87A;
-}
-
-#menu_hamburguesa li:last-child {
-    border-bottom: none;
-}
-
-#menu_hamburguesa li a {
-    color: #FFFFFF;
-    font-size: 18px;
-    padding: 4px;
-    text-decoration: none;
-    display: block;
-}
-
 #boton_hamburguesa {
     background-color: #471754;
-    color: #FFFFFF;
-    font-size: 24px;
-    padding: 10px;
     border: none;
+    padding: 10px;
     cursor: pointer;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    border-radius: 5px;
+    position: relative;
 }
 
-#boton_hamburguesa:hover {
-    background-color: #991D5D;
-    color: #FFFFFF;
-    transform: scale(1.1);
-}
-
-#menu_hamburguesa li:hover {
-    background-color: #991D5D;
-    border-radius: 25px;
+#boton_hamburguesa span {
+    color: white;
+    font-size: 24px;
 }
 
 #menu_hamburguesa.mostrando {
-    display: flex;
-    flex-direction: column;
-    width: 10%;
-    border-radius: 25px;
+    right: 0;
 }
 
-#boton_hamburguesa span.rotar {
-    transform: rotate(90deg);
-    transition: transform 0.3s ease-in-out;
+
+.menu-hamburguesa {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    z-index: 1000;
 }
+
+.menu-hamburguesa ul {
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+}
+
+.menu-hamburguesa li {
+    margin: 20px 0;
+}
+
+.menu-hamburguesa a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.menu-hamburguesa.mostrando {
+    right: 0;
+}
+
 
 /*------------------------Carrusel-----------------------*/
 

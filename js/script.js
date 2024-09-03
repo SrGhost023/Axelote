@@ -12,21 +12,32 @@ document.addEventListener('DOMContentLoaded', function () {
         const input = buscador.querySelector('input');
         input.focus();
     });
+
     // Mantener el buscador visible mientras el input está enfocado
     buscador.addEventListener('focusin', function () {
         buscador.classList.add('activo');
     });
+
     // Manejar el clic fuera del buscador para ocultarlo
     document.addEventListener('click', function (event) {
         if (!buscador.contains(event.target) && event.target !== buscarButton) {
             buscador.classList.remove('activo');
         }
     });
-    // Maneja el clic en el botón hamburguesa
-    botonHamburguesa.addEventListener('click', function () {
+
+    // Manejar el clic en el botón hamburguesa
+    botonHamburguesa.addEventListener('click', function (event) {
+        event.stopPropagation(); // Evita que el clic en el botón cierre el menú hamburguesa
         menuHamburguesa.classList.toggle('mostrando');
-        this.querySelector('#menu_hamburguesa span').classList.toggle('rotar');
     });
+
+    // Cierra el menú hamburguesa si se hace clic fuera de él
+    document.addEventListener('click', function (event) {
+        if (!menuHamburguesa.contains(event.target) && !botonHamburguesa.contains(event.target)) {
+            menuHamburguesa.classList.remove('mostrando');
+        }
+    });
+
     menuDesplegable.querySelector('button').addEventListener('click', function(event) {
         event.preventDefault(); // Evita el comportamiento predeterminado del botón
         submenu.classList.toggle('visible'); // Alterna la clase 'visible'

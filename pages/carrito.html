@@ -21,15 +21,13 @@
                 <span class="nombre">Axelote</span>
             </a>
             <ul class="menu-inicial">
-                <li class="li menu-desplegable" id="menu_desplegable">
-                    <button>Categorías</button>
-                    <ul class="submenu">
-                        <li><a href="catalogo.html?query=PC">PCs</a></li>
-                        <li><a href="catalogo.html?query=Celular">Celulares</a></li>
-                        <li><a href="catalogo.html?query=Tablet">Tablets</a></li>
-                        <li><a href="catalogo.html?query=Notebook">Notebooks</a></li>
-                    </ul>
-                </li>
+                <li class="li menu-desplegable" id="menu_desplegable"><button>Categorías</button></li>
+                <ul class="submenu">
+                    <li><a href="catalogo.html?query=PC">PCs</a></li>
+                    <li><a href="catalogo.html?query=Celular">Celulares</a></li>
+                    <li><a href="catalogo.html?query=Tablet">Tablets</a></li>
+                    <li><a href="catalogo.html?query=Notebook">Notebooks</a></li>
+                </ul>
             </ul>
             <div class="buscador">
                 <button type="submit" id="buscar">
@@ -51,10 +49,12 @@
             <button id="boton_hamburguesa">
                 <span>&#9776;</span>
             </button>
-            <ul id="menu_hamburguesa">
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="acercaDe.html">Acerca De</a></li>
-            </ul>
+            <div id="menu_hamburguesa" class="menu-hamburguesa">
+                <ul>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="acercaDe.html">Acerca De</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -77,7 +77,7 @@
     </footer>
     <script src="../js/script.js"></script>
     <script src="../js/search.js"></script>
-    <script src="../js/productos-lista.js"></script>
+    <script src="../js/productos.js"></script>
     <script src="../js/carrito.js"></script>
 </body>
 
