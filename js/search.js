@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const searchTerm = urlParams.get('query');
+    const searchTerm =  decodeURIComponent(urlParams.get('query')); // Utiliza decodeURIComponent para decodificar
     // Verificar si el término de búsqueda es nulo
     const searchTermLower = searchTerm ? searchTerm.toLowerCase() : '';
     const searchResults = document.getElementById('search-results');
