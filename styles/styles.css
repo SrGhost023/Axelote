@@ -979,6 +979,40 @@ button#registrarse:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/*-------------------------------------Acerca de--------------------------------------*/
+
+.Acerca {
+    max-width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.AcercaDe {
+    background-color: #FFFFFF;
+    text-align: center;
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333333;
+}
+
+.AcercaDe h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #DEC87A;
+    margin: 0;
+}
+
+.AcercaDe p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
 
 /*-------------------------------------Pie de Página----------------------------------*/
 
