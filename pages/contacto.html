@@ -24,17 +24,15 @@
             <ul class="menu-inicial">
                 <li class="li menu-desplegable" id="menu_desplegable"><button>Categorías</button></li>
                 <ul class="submenu">
-                    <li><a href="catalogo.html/?categoria=PC">PCs</a></li>
-                    <li><a href="catalogo.html/?categoria=Celular">Celulares</a></li>
-                    <li><a href="catalogo.html/?categoria=Tablet">Tablets</a></li>
-                    <li><a href="catalogo.html/?categoria=Notebook">Notebooks</a></li>
+                    <li><a href="catalogo.html?query=PC">PCs</a></li>
+                    <li><a href="catalogo.html?query=Celular">Celulares</a></li>
+                    <li><a href="catalogo.html?query=Tablet">Tablets</a></li>
+                    <li><a href="catalogo.html?query=Notebook">Notebooks</a></li>
                 </ul>
             </ul>
             <div class="buscador">
-                <button id="buscar">
-                    <a href="catalogo.html">
-                        <img src="../images/icons/lupa.png" alt="Imagen de una Lupa." />
-                    </a>
+                <button type="submit" id="buscar">
+                    <img src="../images/icons/lupa.png" alt="Imagen de una Lupa." />
                 </button>
                 <form id="search-form" action="catalogo.html" method="GET">
                     <input type="search" id="search-bar" name="query" placeholder="Buscar productos..." required />

@@ -212,7 +212,7 @@ ul {
     animation: hideInput 0.3s ease forwards;
 }
 
-.buscador input {
+.buscador #search-form input {
     border: 1px solid #DDDDDD;
     border-radius: 20px;
     padding: 5px 15px;
@@ -222,7 +222,11 @@ ul {
     visibility: hidden;
 }
 
-.buscador.activo input {
+.buscar #search-form button {
+    visibility: visible;
+}
+
+.buscador.activo #search-form input {
     opacity: 1;
     width: 90%;
     margin-right: 50px;

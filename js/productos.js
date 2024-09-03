@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
             productList.appendChild(productItem);
         });
     }
-
     // Obtener productos desde el servidor y mostrarlos
     fetch('procesar.php')
         .then(response => {
@@ -31,9 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
             displayProducts(products);
         })
         .catch(error => console.error('Error al cargar los productos:', error));
-
     // Función de filtrado de productos
-    window.filterProducts = function() {
+    window.filterProducts = function () {
         const searchTerm = document.getElementById('search-bar').value.toLowerCase();
         fetch('procesar.php')
             .then(response => {
@@ -43,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 return response.json();
             })
             .then(products => {
-                const filteredProducts = products.filter(product => 
-                    product.nombre.toLowerCase().includes(searchTerm) || 
+                const filteredProducts = products.filter(product =>
+                    product.nombre.toLowerCase().includes(searchTerm) ||
                     product.descripcion.toLowerCase().includes(searchTerm)
                 );
                 console.log('Productos filtrados:', filteredProducts); // Verificar los productos filtrados

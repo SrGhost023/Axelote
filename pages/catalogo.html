@@ -24,20 +24,18 @@
             <ul class="menu-inicial">
                 <li class="li menu-desplegable" id="menu_desplegable"><button>Categorías</button></li>
                 <ul class="submenu">
-                    <li><a href="catalogo.html/?categoria=PC">PCs</a></li>
-                    <li><a href="catalogo.html/?categoria=Celular">Celulares</a></li>
-                    <li><a href="catalogo.html/?categoria=Tablet">Tablets</a></li>
-                    <li><a href="catalogo.html/?categoria=Notebook">Notebooks</a></li>
+                    <li><a href="catalogo.html?query=PC">PCs</a></li>
+                    <li><a href="catalogo.html?query=Celular">Celulares</a></li>
+                    <li><a href="catalogo.html?query=Tablet">Tablets</a></li>
+                    <li><a href="catalogo.html?query=Notebook">Notebooks</a></li>
                 </ul>
             </ul>
             <div class="buscador">
-                <button id="buscar">
-                    <a href="#">
-                        <img src="../images/icons/lupa.png" alt="Imagen de una Lupa." />
-                    </a>
+                <button type="submit" id="buscar">
+                    <img src="../images/icons/lupa.png" alt="Buscar">
                 </button>
                 <form id="search-form" action="catalogo.html" method="GET">
-                    <input type="text" id="search-bar" name="query" placeholder="Buscar productos..." required>
+                    <input type="search" id="search-bar" name="query" placeholder="Buscar productos..." required>
                 </form>
             </div>
             <ul class="menu-items">
@@ -60,7 +58,6 @@
     </header>
 
     <main>
-        <!-- Contenedor de resultados en forma de lista -->
         <ul id="search-results" class="product-list">
             <!-- Los productos filtrados se generarán dinámicamente aquí como elementos de lista -->
         </ul>
