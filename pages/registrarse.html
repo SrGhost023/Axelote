@@ -68,7 +68,7 @@
 
     <section class="contenedor-register">
         <article class="contenedor-formulario-register">
-            <form action="registrarse.php" method="POST" class="formulario">
+            <form action="registrarse.php" method="POST" class="formulario" id="form_register">
                 <h2 class="registrarse-titulo">Registrarse</h2>
                 <div class="grupos-de-inputs">
                     <div>
@@ -99,7 +99,7 @@
                     </div>
                     <div>
                         <label for="fecha-de-nacimiento">Fecha de Nacimiento</label>
-                        <input type="date" name="fecha-de-nacimiento" id="fecha_de_nacimiento" required />
+                        <input type="date" name="fecha_de_nacimiento" id="fecha_de_nacimiento" required />
                     </div>
                 </div>
                 <br />
@@ -110,7 +110,7 @@
                     </div>
                     <div>
                         <label for="contrasenia-repetida">Repetir Contraseña</label>
-                        <input type="password" name="contrasenia-repetida" id="contrasenia_repetida" placeholder="Repetir Contraseña" required />
+                        <input type="password" name="contrasenia_repetida" id="contrasenia_repetida" placeholder="Repetir Contraseña" required />
                     </div>
                 </div>
                 <br />
@@ -138,6 +138,7 @@
     </footer>
     <script src="../js/script.js"></script>
     <script src="../js/search.js"></script>
+    <script src="../js/register.js"></script>
     <script src="../js/logueo.js"></script>
 </body>
 
