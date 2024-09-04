@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h3>${product.nombre}</h3>
                 <p>${product.descripcion}</p>
                 <p><strong>Precio: $${product.precio.toFixed(2)}</strong></p>
-                <button>Añadir al carrito</button>
+                <button class="agregar-al-carrito" id="agregar_al_carrito" data_product_id="${product.id}">Añadir al carrito</button>
             `;
             productList.appendChild(productItem);
         });
