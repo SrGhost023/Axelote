@@ -5,8 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="author" content="Axel Ferreira, Enzo Martinez" />
     <meta name="keywords" content="Electrónica, Market, Ajolote, Axelote Market, Tienda en Línea, E-Commerce" />
-    <meta name="description"
-        content="Axelote Market es una tienda en línea especializada en productos de electrónica." />
+    <meta name="description" content="Contáctanos en Axelote Market para cualquier consulta o información adicional." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Axelote Market - Electrónica</title>
     <link rel="shortcut icon" href="../images/icons/carrito.png" type="image/x-icon" />
@@ -14,25 +13,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
-<body class="body">
+<body>
     <header class="encabezado">
         <nav class="navbar">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="../images/logo.png" alt="Logo de Axelote Market de Nuestra Mascota Ajolote." title="Logo Axelote." />
                 <span class="nombre">Axelote</span>
             </a>
             <ul class="menu-inicial">
-                <li class="li menu-desplegable" id="menu_desplegable">
-                    <button>Categorías</button>
-                    <ul class="submenu">
-                        <li><a href="catalogo.html?query=PC">PCs</a></li>
-                        <li><a href="catalogo.html?query=Celular">Celulares</a></li>
-                        <li><a href="catalogo.html?query=Tablet">Tablets</a></li>
-                        <li><a href="catalogo.html?query=Notebook">Notebooks</a></li>
-                    </ul>
-                </li>
+                <li class="li menu-desplegable" id="menu_desplegable"><button>Categorías</button></li>
+                <ul class="submenu">
+                    <li><a href="catalogo.html?query=PC">PCs</a></li>
+                    <li><a href="catalogo.html?query=Celular">Celulares</a></li>
+                    <li><a href="catalogo.html?query=Tablet">Tablets</a></li>
+                    <li><a href="catalogo.html?query=Notebook">Notebooks</a></li>
+                </ul>
             </ul>
-            
             <div class="buscador">
                 <button type="submit" id="buscar">
                     <img src="../images/icons/lupa.png" alt="Imagen de una Lupa." />
@@ -43,7 +39,7 @@
             </div>
             <ul class="menu-items">
                 <li id="carrito_li">
-                    <a href="carrito.html">
+                    <a href="#">
                         <img src="../images/icons/carrito.png" alt="Imagen de un Carrito con un Ajolote." />
                     </a>
                 </li>
@@ -65,44 +61,14 @@
                     <li><a href="#" onclick="cerrarSesion()" id="cerrar_sesion">Cerrar Sesión</a></li>
                 </ul>
             </div>
-
         </nav>
     </header>
 
-    <section class="carrusel-container">
-        <article class="carrusel">
-            <div class="carrusel-item">
-                <a href="catalogo.html?query=Celular Samsung Gamer 256GB/32GB" class="enlace-producto">
-                    <img src="../images/products/producto.jpeg" alt="Producto 1." />
-                    <p>Celular Samsung Gamer 256GB/32GB</p>
-                </a>
-            </div>
-            <div class="carrusel-item">
-                <a href="catalogo.html?query=Notebook Gamer 1TB/64GB" class="enlace-producto">
-                    <img src="../images/products/producto2.jpeg" alt="Producto 2." />
-                    <p>Notebook Gamer 1TB/64GB</p>
-                </a>
-            </div>
-            <div class="carrusel-item">
-                <a href="catalogo.html?query=Combo PC Gamer + Silla Gamer + Escritorio" class="enlace-producto">
-                    <img src="../images/products/producto3.jpeg" alt="Producto 3." />
-                    <p>Combo PC Gamer + Silla Gamer + Escritorio</p>
-                </a>
-            </div>
-        </article>
-        <img src="../images/icons/flechaIzquierda.png" class="nav-btn anterior" alt="Ir al anterior producto" aria-label="Anterior" />
-        <img src="../images/icons/flechaDerecha.png" class="nav-btn siguiente" alt="Ir al siguiente producto" aria-label="Siguiente" />        
-        <div class="carrusel-indicadores">
-            <span class="indicador activo"></span>
-            <span class="indicador"></span>
-            <span class="indicador"></span>
+    <main class="perfil-usuario">
+        <h1>Perfil de Usuario</h1>
+        <div id="info-usuario" class="info-usuario">
+            <!-- Información del usuario será cargada aquí por JavaScript -->
         </div>
-    </section>
-
-    <main>
-        <section id="product-list" class="product-list">
-            <!-- Los productos se generarán dinámicamente aquí -->
-        </section>
     </main>
 
     <footer class="footer">
@@ -118,8 +84,6 @@
     </footer>
 
     <script src="../js/script.js"></script>
-    <script src="../js/carrusel.js"></script>
-    <script src="../js/productos.js"></script>
     <script src="../js/search.js"></script>
     <script src="../js/logueo.js"></script>
 </body>

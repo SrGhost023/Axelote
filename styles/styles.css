@@ -1032,6 +1032,13 @@ button#registrarse:hover {
     margin-bottom: 20px;
 }
 
+/*-------------------------------------Perfil Usuario---------------------------------*/
+
+.perfil-usuario{
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
 /*-------------------------------------Pie de Página----------------------------------*/
 
 .footer {
