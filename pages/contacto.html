@@ -45,8 +45,13 @@
                         <img src="../images/icons/carrito.png" alt="Imagen de un Carrito con un Ajolote." />
                     </a>
                 </li>
-                <li class="li"><a href="iniciarSesion.html">Iniciar Sesión</a></li>
-                <li class="li"><a href="registrarse.html">Registrarse</a></li>
+                <li class="li"><a href="iniciarSesion.html" id="iniciar_sesion">Iniciar Sesión</a></li>
+                <li class="li"><a href="registrarse.html" id="registrarse">Registrarse</a></li>
+                <li class="" id="perfil" style="display: none;">
+                    <a href="perfil.html">
+                        <img src="../images/icons/perfil.png" alt="Imagen de perfil del usuario" />
+                    </a>
+                </li>
             </ul>
             <button id="boton_hamburguesa">
                 <span>&#9776;</span>
@@ -55,6 +60,7 @@
                 <ul>
                     <li><a href="contacto.html">Contacto</a></li>
                     <li><a href="acercaDe.html">Acerca De</a></li>
+                    <li><a href="#" onclick="cerrarSesion()" id="cerrar_sesion">Cerrar Sesión</a></li>
                 </ul>
             </div>
         </nav>
@@ -118,6 +124,7 @@
     </footer>
     <script src="../js/script.js"></script>
     <script src="../js/search.js"></script>
+    <script src="../js/logueo.js"></script>
 </body>
 
 </html>
