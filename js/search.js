@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p>${product.descripcion}</p>
                         <p><strong>Precio: $${product.precio.toFixed(2)}</strong></p>
                     </div>
-                    <button>Añadir al carrito</button>
+                    <button class="agregar-al-carrito" id="agregar_al_carrito" data_product_id="${product.id}">Añadir al carrito</button>
                 `;
                 searchResults.appendChild(productItem);
             });
@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(data => {
-            console.log('Data received:', data); // Verifica los datos recibidos
             displayProducts(data); // Mostrar los productos filtrados
         })
         .catch(error => {

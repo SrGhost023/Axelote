@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const productList = document.getElementById('product-list');
 
     function displayProducts(products) {
-        console.log('Productos a mostrar:', products); // Verificar los datos recibidos
         productList.innerHTML = ''; // Limpiar la lista de productos
         products.forEach(product => {
             const productItem = document.createElement('div');
@@ -12,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h3>${product.nombre}</h3>
                 <p>${product.descripcion}</p>
                 <p><strong>Precio: $${product.precio.toFixed(2)}</strong></p>
-                <button>Añadir al carrito</button>
+                <button class="agregar-al-carrito" id="agregar_al_carrito" data_product_id="${product.id}">Añadir al carrito</button>
             `;
             productList.appendChild(productItem);
         });
@@ -26,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(products => {
-            console.log('Productos recibidos:', products); // Verificar los datos recibidos
             displayProducts(products);
         })
         .catch(error => console.error('Error al cargar los productos:', error));

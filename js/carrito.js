@@ -1,62 +1,74 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const userId = 1; // Obtén el ID del usuario de manera segura, por ejemplo, desde la sesión
-    const cartItemsContainer = document.getElementById('cart-items');
-
-    function displayCartItems(items) {
-        cartItemsContainer.innerHTML = '';
-        if (items.length === 0) {
-            cartItemsContainer.innerHTML = '<p>Tu carrito está vacío.</p>';
-        } else {
-            items.forEach(item => {
-                const itemElement = document.createElement('li');
-                itemElement.className = 'cart-item';
-                itemElement.innerHTML = `
-                    <img src="${item.url_de_la_imagen}" alt="${item.nombre}" />
-                    <div class="cart-item-info">
-                        <h3>${item.nombre}</h3>
-                        <p>${item.descripcion}</p>
-                        <p><strong>Precio: $${item.precio.toFixed(2)}</strong></p>
-                        <button class="remove-btn" data-id="${item.id}">❌</button>
-                    </div>
-                `;
-                cartItemsContainer.appendChild(itemElement);
-            });
-        }
-    }
-    function fetchCartItems() {
-        fetch(`procesar.php?action=get_cart&user_id=${userId}`)
-            .then(response => response.json())
-            .then(data => {
-                displayCartItems(data);
-            })
-            .catch(error => {
-                console.error('Error al cargar los productos del carrito:', error);
-                cartItemsContainer.innerHTML = '<p>Error al cargar los productos del carrito.</p>';
-            });
-    }
-    cartItemsContainer.addEventListener('click', event => {
-        if (event.target.classList.contains('remove-btn')) {
-            const cartItemId = event.target.getAttribute('data-id');
-
-            fetch('procesar.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: `action=remove_from_cart&carrito_id=${cartItemId}`
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    fetchCartItems(); // Refrescar la lista de productos en el carrito
+document.addEventListener('DOMContentLoaded', function() {
+    function obtenerProductosDelCarrito() {
+        fetch('procesar.php?action=get_cart', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.text()) // Cambiado a text() para inspeccionar la respuesta
+        .then(text => {
+            try {
+                const data = JSON.parse(text); // Intentar analizar como JSON
+                if (data.error) {
+                    console.error('Error al obtener productos del carrito:', data.error);
                 } else {
-                    console.error('Error al eliminar el producto:', data.error);
+                    mostrarProductosEnCarrito(data);
                 }
-            })
-            .catch(error => {
-                console.error('Error al eliminar el producto:', error);
+            } catch (e) {
+                console.error('Error al analizar la respuesta JSON:', e);
+                console.error('Respuesta del servidor:', text);
+            }
+        })
+        .catch(error => console.error('Error al hacer la solicitud:', error));
+    }
+
+    function mostrarProductosEnCarrito(productos) {
+        const carritoList = document.getElementById('carrito-list');
+        carritoList.innerHTML = ''; // Limpiar lista
+
+        productos.forEach(producto => {
+            const item = document.createElement('div');
+            item.classList.add('carrito-item');
+            item.innerHTML = `
+                <img src="${producto.url_de_la_imagen}" alt="${producto.nombre}" />
+                <p>${producto.nombre}</p>
+                <p>${producto.descripcion}</p>
+                <p>${producto.precio} USD</p>
+                <button class="eliminar" data-carrito-id="${producto.id}">Eliminar</button>
+            `;
+            carritoList.appendChild(item);
+        });
+
+        document.querySelectorAll('.eliminar').forEach(button => {
+            button.addEventListener('click', function() {
+                const carritoId = this.getAttribute('data-carrito-id');
+                eliminarProductoDelCarrito(carritoId);
             });
-        }
-    });
-    fetchCartItems(); // Cargar los productos del carrito al inicio
+        });
+    }
+
+    function eliminarProductoDelCarrito(carritoId) {
+        fetch('procesar.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams({
+                action: 'remove_from_cart',
+                carrito_id: carritoId
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                console.error('Error al eliminar producto del carrito:', data.error);
+            } else {
+                obtenerProductosDelCarrito(); // Actualizar lista después de eliminar
+            }
+        })
+        .catch(error => console.error('Error al hacer la solicitud:', error));
+    }
+
+    obtenerProductosDelCarrito();
 });
