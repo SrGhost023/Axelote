@@ -65,10 +65,27 @@
     </header>
 
     <section class="carrito">
-        <ul id="cart-items">
-            <!-- Los productos del carrito se llenarán aquí -->
-        </ul>
+        <div class="product" data-id="1" data-name="Producto 1" data-price="100">
+            <h2>Producto 1</h2>
+            <p>Precio: $100</p>
+            <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+    
+        <div class="product" data-id="2" data-name="Producto 2" data-price="200">
+            <h2>Producto 2</h2>
+            <p>Precio: $200</p>
+            <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+    
+        <!-- Carrito -->
+        <div class="cart">
+            <h2>Carrito de Compras</h2>
+            <div class="cart-items"></div>
+            <p>Total: $<span id="total">0</span></p>
+            <button id="checkout">Proceder al Pago</button>
+        </div>
     </section>
+
 
     <footer class="footer">
         <div class="redes-sociales">
