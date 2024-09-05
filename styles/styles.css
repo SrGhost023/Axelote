@@ -1183,11 +1183,6 @@ footer a:hover::after {
         width: 100%;
         margin-bottom: 20px;
     }
-
-    .menu-hamburguesa {
-        display: block;
-        width: 200px;
-    }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
@@ -1225,16 +1220,11 @@ footer a:hover::after {
         margin-bottom: 20px;
     }
 
-    #boton_hamburguesa {
-        display: block;
-    }
-
-    .menu-items, .menu-inicial {
-        display: none;
-    }
-
-    .menu-hamburguesa.visible {
-        display: block;
+    #menu_hamburguesa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
