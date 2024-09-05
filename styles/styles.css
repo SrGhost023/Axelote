@@ -1116,3 +1116,128 @@ footer a:hover::after {
 	text-decoration: none;
 	color: #000;
 }
+
+/*-----------------------------------Media Queries--------------------------------*/
+
+@media (max-width: 576px) {
+    body {
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .menu-inicial,
+    .menu-items {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo img {
+        width: 12vh;
+    }
+
+    .carrusel-container {
+        width: 95%;
+    }
+
+    .carrusel-item img {
+        max-width: 200px;
+    }
+
+    .contenedor-formulario,
+    .contenedor-formulario-register {
+        width: 90%;
+    }
+
+    .product-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .menu-hamburguesa {
+        display: block;
+        width: 200px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .menu-inicial,
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 14vh;
+    }
+
+    .carrusel-container {
+        width: 90%;
+    }
+
+    .carrusel-item img {
+        max-width: 250px;
+    }
+
+    .contenedor-formulario,
+    .contenedor-formulario-register {
+        width: 70%;
+    }
+
+    .product-item {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+
+    #boton_hamburguesa {
+        display: block;
+    }
+
+    .menu-items, .menu-inicial {
+        display: none;
+    }
+
+    .menu-hamburguesa.visible {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .carrusel-container {
+        width: 85%;
+    }
+
+    .contenedor-formulario,
+    .contenedor-formulario-register {
+        width: 60%;
+    }
+
+    .product-item {
+        width: 30%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .carrusel-container {
+        width: 70%;
+    }
+
+    .contenedor-formulario,
+    .contenedor-formulario-register {
+        width: 30%;
+    }
+
+    .product-item {
+        width: 23%;
+    }
+}

@@ -33,9 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
             menuHamburguesa.classList.remove('mostrando');
         }
     });
-    menuDesplegable.querySelector('button').addEventListener('click', function(event) {
+    menuDesplegable.querySelector('button').addEventListener('click', function (event) {
         event.preventDefault(); // Evita el comportamiento predeterminado del botón
         submenu.classList.toggle('visible'); // Alterna la clase 'visible'
     });
-    
 });

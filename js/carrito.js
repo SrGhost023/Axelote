@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     function obtenerProductosDelCarrito() {
         fetch('procesar.php?action=get_cart', {
             method: 'GET',
@@ -6,21 +6,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Content-Type': 'application/json'
             }
         })
-        .then(response => response.text()) // Cambiado a text() para inspeccionar la respuesta
-        .then(text => {
-            try {
-                const data = JSON.parse(text); // Intentar analizar como JSON
-                if (data.error) {
-                    console.error('Error al obtener productos del carrito:', data.error);
-                } else {
-                    mostrarProductosEnCarrito(data);
+            .then(response => response.text()) // Cambiado a text() para inspeccionar la respuesta
+            .then(text => {
+                try {
+                    const data = JSON.parse(text); // Intentar analizar como JSON
+                    if (data.error) {
+                        console.error('Error al obtener productos del carrito:', data.error);
+                    } else {
+                        mostrarProductosEnCarrito(data);
+                    }
+                } catch (e) {
+                    console.error('Error al analizar la respuesta JSON:', e);
+                    console.error('Respuesta del servidor:', text);
                 }
-            } catch (e) {
-                console.error('Error al analizar la respuesta JSON:', e);
-                console.error('Respuesta del servidor:', text);
-            }
-        })
-        .catch(error => console.error('Error al hacer la solicitud:', error));
+            })
+            .catch(error => console.error('Error al hacer la solicitud:', error));
     }
 
     function mostrarProductosEnCarrito(productos) {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         document.querySelectorAll('.eliminar').forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 const carritoId = this.getAttribute('data-carrito-id');
                 eliminarProductoDelCarrito(carritoId);
             });
@@ -59,15 +59,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 carrito_id: carritoId
             })
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.error) {
-                console.error('Error al eliminar producto del carrito:', data.error);
-            } else {
-                obtenerProductosDelCarrito(); // Actualizar lista después de eliminar
-            }
-        })
-        .catch(error => console.error('Error al hacer la solicitud:', error));
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    console.error('Error al eliminar producto del carrito:', data.error);
+                } else {
+                    obtenerProductosDelCarrito(); // Actualizar lista después de eliminar
+                }
+            })
+            .catch(error => console.error('Error al hacer la solicitud:', error));
     }
 
     obtenerProductosDelCarrito();
