@@ -37,4 +37,5 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault(); // Evita el comportamiento predeterminado del botón
         submenu.classList.toggle('visible'); // Alterna la clase 'visible'
     });
+    
 });

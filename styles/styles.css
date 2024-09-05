@@ -16,6 +16,10 @@
     }
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
 .body {
     font-family: 'Poppins', sans-serif, Arial;
     margin: 0;
@@ -1032,10 +1036,6 @@ button#registrarse:hover {
     margin-bottom: 20px;
 }
 
-/*-------------------------------------Perfil Usuario---------------------------------*/
-
-
-
 /*-------------------------------------Pie de Página----------------------------------*/
 
 .footer {
@@ -1093,4 +1093,26 @@ button#registrarse:hover {
 
 footer a:hover::after {
     width: 100%;
+}
+
+/*-------------------------------------Subir-------------------------------------*/
+
+.subir{
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	background-color: #471754;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+	bottom: 30px;
+	right: 30px;
+	cursor: pointer;
+	opacity: .8;
+}
+
+.subir a{
+	text-decoration: none;
+	color: #000;
 }
