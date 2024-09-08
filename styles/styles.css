@@ -1036,6 +1036,56 @@ button#registrarse:hover {
     margin-bottom: 20px;
 }
 
+/*------------------------------------Perfil---------------------------------------*/
+
+main {
+    padding: 2em;
+}
+
+#user-profile {
+    max-width: 800px;
+    margin: auto;
+    background-color: #471754;
+    border: #DEC87A solid 3px;
+    border-radius: 25px;
+}
+
+#profile-container {
+    display: flex;
+    align-items: center;
+}
+
+#profile-photo {
+    margin-right: 5px; /* Ajusta la separación aquí */
+}
+
+#profile-photo img {
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#separator {
+    width: 1px;
+    background-color: #DEC87A; /* Color de la línea vertical */
+    height: 150px; /* Asegúrate de que la altura coincida con la de la foto de perfil */
+    margin-left: 10px; /* Ajusta la separación aquí */
+}
+
+#profile-info {
+    flex: 2;
+}
+
+.profile-item {
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    text-align: center;
+    color: #DEC87A;
+}
+
 /*-------------------------------------Carrito--------------------------------------*/
 
 .product {

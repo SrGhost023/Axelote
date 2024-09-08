@@ -1,26 +1,18 @@
-
-// Función para cargar los datos del perfil del usuario
-document.addEventListener('DOMContentLoaded', function () {
-    fetch('../pages/getPerfil.php') // Archivo PHP que devuelve los datos del usuario
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('../pages/perfil.php')
         .then(response => response.json())
         .then(data => {
-            if (data.success) {
-                const user = data.user;
-                const infoUsuarioDiv = document.getElementById('info-usuario');
-                infoUsuarioDiv.innerHTML = `
-                    <p><strong>Nombre:</strong> ${user.nombre_real}</p>
-                    <p><strong>Apellido:</strong> ${user.apellido_real}</p>
-                    <p><strong>Nombre de Usuario:</strong> ${user.nombre_de_usuario}</p>
-                    <p><strong>Correo Electrónico:</strong> ${user.email}</p>
-                    <p><strong>Dirección:</strong> ${user.direccion}</p>
-                    <p><strong>Fecha de Nacimiento:</strong> ${user.fecha_de_nacimiento}</p>
-                `;
-            } else {
-                document.getElementById('info-usuario').innerHTML = '<p>No se pudieron cargar los datos del usuario.</p>';
-            }
+            const profileInfo = document.getElementById('profile-info');
+            
+            // Construir el HTML para los datos del perfil
+            profileInfo.innerHTML = `
+                <div class="profile-item"><strong>Nombre:</strong> ${data.nombre}</div>
+                <div class="profile-item"><strong>Apellido:</strong> ${data.apellido}</div>
+                <div class="profile-item"><strong>Nombre de Usuario:</strong> ${data.usuario}</div>
+                <div class="profile-item"><strong>Email:</strong> ${data.email}</div>
+                <div class="profile-item"><strong>Dirección:</strong> ${data.direccion}</div>
+                <div class="profile-item"><strong>Fecha de Nacimiento:</strong> ${data.fecha_nacimiento}</div>
+            `;
         })
-        .catch(error => {
-            console.error('Error al cargar los datos del perfil:', error);
-            document.getElementById('info-usuario').innerHTML = '<p>Hubo un error al cargar los datos del usuario.</p>';
-        });
+        .catch(error => console.error('Error al cargar los datos del perfil:', error));
 });
