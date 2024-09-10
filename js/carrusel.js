@@ -1,62 +1,50 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const carrusel = document.querySelector(".carrusel");
-    const items = document.querySelectorAll(".carrusel-item");
-    const totalItems = items.length;
-    const indicadores = document.querySelectorAll(".indicador");
-    const intervalo = 3000; // Intervalo de 3 segundos
-    let index = 0; // Empezar en el primer ítem
+const carrusel = document.querySelector('.carrusel');
+const anterior = document.querySelector('.anterior');
+const siguiente = document.querySelector('.siguiente');
+const indicadores = document.querySelectorAll('.indicador');
+const totalItems = document.querySelectorAll('.carrusel-item').length;
+let currentIndex = 0;
 
-    // Clonar el primer y último ítem
-    const primerItem = carrusel.firstElementChild.cloneNode(true);
-    const ultimoItem = carrusel.lastElementChild.cloneNode(true);
-
-    carrusel.appendChild(primerItem);
-    carrusel.insertBefore(ultimoItem, carrusel.firstChild);
-
-    // Ajustar el índice inicial
-    carrusel.style.transform = `translateX(-${100}%)`;
-
-    function mostrarImagen(index) {
-        const desplazamiento = -((index + 1) * 100); // Ajustar el desplazamiento
-        carrusel.style.transform = `translateX(${desplazamiento}%)`;
-        indicadores.forEach(indicador => indicador.classList.remove("activo"));
-        indicadores[index % (totalItems - 2)].classList.add("activo");
+function mostrarProducto(index) {
+    if (index >= totalItems) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = totalItems - 1;
+    } else {
+        currentIndex = index;
     }
+    const offset = -currentIndex * 100;
+    carrusel.style.transform = `translateX(${offset}%)`;
+    actualizarIndicadores();
+}
+function actualizarIndicadores() {
+    indicadores.forEach((indicador, index) => {
+        indicador.classList.toggle('activo', index === currentIndex);
+    });
+}
+function iniciarAutoSlide() {
+    return setInterval(() => {
+        mostrarProducto(currentIndex + 1);
+    }, 5000); // Cambia de producto cada 5 segundos
+}
+let autoSlideInterval = iniciarAutoSlide();
 
-    function siguienteImagen() {
-        index++;
-        if (index >= totalItems) {
-            index = 0;
-            carrusel.style.transition = 'none'; // Desactivar la transición
-            carrusel.style.transform = `translateX(-${(index + 1) * 100}%)`;
-            setTimeout(() => {
-                carrusel.style.transition = 'transform 0.5s ease-in-out'; // Reactivar la transición
-                index++;
-                mostrarImagen(index);
-            }, 50);
-        } else {
-            mostrarImagen(index);
-        }
-    }
-
-    function imagenAnterior() {
-        index--;
-        if (index < 0) {
-            index = totalItems - 2;
-            carrusel.style.transition = 'none'; // Desactivar la transición
-            carrusel.style.transform = `translateX(-${(index + 1) * 100}%)`;
-            setTimeout(() => {
-                carrusel.style.transition = 'transform 0.5s ease-in-out'; // Reactivar la transición
-                index--;
-                mostrarImagen(index);
-            }, 50);
-        } else {
-            mostrarImagen(index);
-        }
-    }
-
-    document.querySelector(".siguiente").addEventListener("click", siguienteImagen);
-    document.querySelector(".anterior").addEventListener("click", imagenAnterior);
-
-    setInterval(siguienteImagen, intervalo);
+siguiente.addEventListener('click', () => {
+    mostrarProducto(currentIndex + 1);
+    resetearAutoSlide();
 });
+anterior.addEventListener('click', () => {
+    mostrarProducto(currentIndex - 1);
+    resetearAutoSlide();
+});
+indicadores.forEach((indicador, index) => {
+    indicador.addEventListener('click', () => {
+        mostrarProducto(index);
+        resetearAutoSlide();
+    });
+});
+function resetearAutoSlide() {
+    limpiarInterval(autoSlideInterval);
+    autoSlideInterval = startAutoSlide();
+}
+mostrarProducto(currentIndex);

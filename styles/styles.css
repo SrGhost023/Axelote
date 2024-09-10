@@ -444,11 +444,11 @@ img {
 }
 
 .anterior {
-    left: -30px; /* Ajusta la distancia desde el borde izquierdo */
+    left: -15px; /* Ajusta la distancia desde el borde izquierdo */
 }
 
 .siguiente {
-    right: -30px; /* Ajusta la distancia desde el borde derecho */
+    right: -15px; /* Ajusta la distancia desde el borde derecho */
 }
 
 
@@ -1064,6 +1064,8 @@ main {
 
 #profile-info {
     flex: 2;
+    padding: 10px;
+    color: #DEC87A;
 }
 
 .profile-item {
