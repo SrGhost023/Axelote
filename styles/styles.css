@@ -396,7 +396,7 @@ img {
     margin: 40px auto;
     width: 100%;
     max-width: 1000px;
-    height: 500px; /* Ajusta la altura según tus necesidades */
+    height: 500px;
     overflow: hidden;
     border: 2px solid #DEC87A;
     border-radius: 10px;
@@ -406,20 +406,20 @@ img {
 .carrusel {
     display: flex;
     height: 100%;
-    width: 100%; /* Asegúrate de que el ancho sea 100% */
+    width: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
 .carrusel-item {
-    flex: 0 0 100%; /* Asegura que cada ítem ocupe el 100% del contenedor */
+    flex: 0 0 100%;
     box-sizing: border-box;
-    padding: 0; /* Elimina el padding si hay algún padding adicional */
+    padding: 0;
 }
 
 .carrusel-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra toda la sección sin distorsión */
+    object-fit: cover;
     border-radius: 10px;
     transition: transform 0.5s ease;
 }
@@ -428,8 +428,8 @@ img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 50px; /* Ajusta el tamaño según sea necesario */
-    height: 50px; /* Ajusta el tamaño según sea necesario */
+    width: 50px;
+    height: 50px;
     background-color: rgba(255, 255, 255, 0.8);
     border: 2px solid #DEC87A;
     border-radius: 50%;
@@ -444,11 +444,11 @@ img {
 }
 
 .anterior {
-    left: -30px; /* Ajusta la distancia desde el borde izquierdo */
+    left: -30px;
 }
 
 .siguiente {
-    right: -30px; /* Ajusta la distancia desde el borde derecho */
+    right: -30px;
 }
 
 
@@ -689,6 +689,7 @@ button#registrarse:hover {
     align-items: center;
     margin: 40px auto;
     width: 100%;
+    border-radius: 20px;
     background-color: #FFFFFF;
 }
 
