@@ -16,8 +16,8 @@
     }
 }
 
-html{
-	scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth;
 }
 
 .body {
@@ -168,7 +168,7 @@ ul {
     position: absolute;
     background-color: #471754;
     list-style: none;
-    padding: 10px; 
+    padding: 10px;
     margin: 0;
     border: 1px solid #ccc;
     z-index: 10;
@@ -376,7 +376,7 @@ img {
     font-size: 18px;
 }
 
-.menu-hamburguesa a:hover{
+.menu-hamburguesa a:hover {
     background-color: #991D5D;
     color: #FFFFFF;
     border-radius: 25px;
@@ -444,21 +444,14 @@ img {
 }
 
 .anterior {
-<<<<<<< HEAD
-    left: -15px; /* Ajusta la distancia desde el borde izquierdo */
+    left: -15px;
+    /* Ajusta la distancia desde el borde izquierdo */
 }
 
 .siguiente {
-    right: -15px; /* Ajusta la distancia desde el borde derecho */
-=======
-    left: -30px;
+    right: -15px;
+    /* Ajusta la distancia desde el borde derecho */
 }
-
-.siguiente {
-    right: -30px;
->>>>>>> 9e2a353c1377d6beb28a9d9f62796a3fc6f1f267
-}
-
 
 .carrusel-indicadores {
     display: flex;
@@ -638,6 +631,7 @@ button#registrarse:hover {
     background-color: #ffffff;
     padding: 20px;
     gap: 20px;
+    border-radius: 25px;
 }
 
 .product-item {
@@ -710,7 +704,7 @@ button#registrarse:hover {
 }
 
 .producto {
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     align-items: center;
     width: 95%;
@@ -942,7 +936,7 @@ button#registrarse:hover {
     margin-bottom: 10px;
 }
 
-.linkContacto{
+.linkContacto {
     color: #f07951;
     text-decoration: none;
 }
@@ -1054,11 +1048,13 @@ main {
 }
 
 #profile-photo {
-    margin-right: 5px; /* Ajusta la separación aquí */
+    margin-right: 5px;
+    /* Ajusta la separación aquí */
 }
 
 #profile-photo img {
-    width: 150px; /* Ajusta el tamaño de la imagen */
+    width: 150px;
+    /* Ajusta el tamaño de la imagen */
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
@@ -1066,9 +1062,12 @@ main {
 
 #separator {
     width: 1px;
-    background-color: #DEC87A; /* Color de la línea vertical */
-    height: 150px; /* Asegúrate de que la altura coincida con la de la foto de perfil */
-    margin-left: 10px; /* Ajusta la separación aquí */
+    background-color: #DEC87A;
+    /* Color de la línea vertical */
+    height: 150px;
+    /* Asegúrate de que la altura coincida con la de la foto de perfil */
+    margin-left: 10px;
+    /* Ajusta la separación aquí */
 }
 
 #profile-info {
@@ -1174,137 +1173,22 @@ footer a:hover::after {
 
 /*-------------------------------------Subir-------------------------------------*/
 
-.subir{
-	position: fixed;
-	width: 40px;
-	height: 40px;
-	background-color: #f07951;
-	border-radius: 50%;
-	text-align: center;
-	font-size: 30px;
-	line-height: 50px;
-	bottom: 30px;
-	right: 30px;
-	cursor: pointer;
-	opacity: .8;
+.subir {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: #f07951;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 50px;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    opacity: .8;
 }
 
-.subir a{
-	text-decoration: none;
-	color: #000;
-}
-
-/*-----------------------------------Media Queries--------------------------------*/
-
-@media (max-width: 576px) {
-    body {
-        padding: 10px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .menu-inicial,
-    .menu-items {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .logo img {
-        width: 12vh;
-    }
-
-    .carrusel-container {
-        width: 95%;
-    }
-
-    .carrusel-item img {
-        max-width: 200px;
-    }
-
-    .contenedor-formulario,
-    .contenedor-formulario-register {
-        width: 90%;
-    }
-
-    .product-item {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-@media (min-width: 577px) and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px;
-    }
-
-    .menu-inicial,
-    .menu-items {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo img {
-        width: 14vh;
-    }
-
-    .carrusel-container {
-        width: 90%;
-    }
-
-    .carrusel-item img {
-        max-width: 250px;
-    }
-
-    .contenedor-formulario,
-    .contenedor-formulario-register {
-        width: 70%;
-    }
-
-    .product-item {
-        width: 48%;
-        margin-bottom: 20px;
-    }
-
-    #menu_hamburguesa {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 992px) {
-    .carrusel-container {
-        width: 85%;
-    }
-
-    .contenedor-formulario,
-    .contenedor-formulario-register {
-        width: 60%;
-    }
-
-    .product-item {
-        width: 30%;
-        margin-bottom: 20px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .carrusel-container {
-        width: 70%;
-    }
-
-    .contenedor-formulario,
-    .contenedor-formulario-register {
-        width: 30%;
-    }
-
-    .product-item {
-        width: 23%;
-    }
+.subir a {
+    text-decoration: none;
+    color: #000;
 }

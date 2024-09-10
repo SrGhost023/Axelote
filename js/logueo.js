@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         return null;
     }
-
     // Verificar si el usuario ha iniciado sesión (cookie)
     let isLoggedIn = getCookie('loggedIn');
 
@@ -31,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('registrarse').style.display = 'block';
     }
 });
-
 // Función para cerrar sesión
 function cerrarSesion() {
     // Borrar la cookie de sesión
@@ -40,6 +38,5 @@ function cerrarSesion() {
     // Redireccionar a la página de inicio de sesión
     window.location.href = 'iniciarSesion.html'; // O usa 'index.html' si prefieres redirigir al inicio
 }
-
 // Añadir el evento de clic para cerrar sesión
 document.getElementById('cerrar_sesion')?.addEventListener('click', cerrarSesion);

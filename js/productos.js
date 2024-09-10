@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayProducts(products) {
         productList.innerHTML = ''; // Limpiar la lista de productos
         products.forEach(product => {
-            const productItem = document.createElement('div');
+            const productItem = document.createElement('div.contenedor-productos');
             productItem.className = 'product-item';
             productItem.innerHTML = `
                 <img src="${product.url_de_la_imagen}" alt="${product.nombre}">
